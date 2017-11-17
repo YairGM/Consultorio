@@ -46,12 +46,11 @@ if (!pg_num_rows($result)) {
   print("Your connection is working, but your database is empty.\nFret not. This is expected for new apps.\n");
 } else {
 	while ($row = pg_fetch_row($result)) {
-		echo $row[0];
 	    echo "<tr>";
-	    echo "<td>" . $row["employee_id"] . "</td>";
-	    echo "<td>" . htmlspecialchars($row["last_name"]) . "</td>";
-	    echo "<td>" . htmlspecialchars($row["first_name"]) . "</td>";
-	    echo "<td>" . htmlspecialchars($row["title"]) . "</td>";
+	    echo "<td>" . $row[0] . "</td>";
+	    echo "<td>" . htmlspecialchars($row[1]) . "</td>";
+	    echo "<td>" . htmlspecialchars($row[2]) . "</td>";
+	    echo "<td>" . htmlspecialchars($row[3]) . "</td>";
 	    echo "</tr>";
 	}
 }
