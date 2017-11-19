@@ -2,8 +2,11 @@
 $usuario = $_POST['nnombre'];
 $pass = $_POST['npassword'];
 
-echo $usuario, ":", $pass;
-/*
+if (empty($usuario)|| empty($pass)){
+	header("Location: index.php");
+	exit();
+}
+
 function pg_connection_string_from_database_url() {
   extract(parse_url($_ENV["DATABASE_URL"]));
   return "user=$user password=$pass host=$host dbname=" . substr($path, 1); # <- you may want to add sslmode=require there too
@@ -11,7 +14,7 @@ function pg_connection_string_from_database_url() {
 $pg_conn = pg_connect(pg_connection_string_from_database_url());
 
 $result = pg_query($pg_conn, "SELECT Usuario"
-     . "FROM usuario");
+     . "FROM usuario where Usuario='" . $usuario . "'");
 
 
 if($row = pg_fetch_array($result)){
@@ -26,5 +29,5 @@ if($row = pg_fetch_array($result)){
 }else{
 	header("Location: index.php");
 	exit();
-}*/
+}
 ?>
