@@ -15,16 +15,17 @@ if (!pg_num_rows($result)) {
   print("Your connection is working, but your database is empty.\nFret not. This is expected for new apps.\n");
 else{
 	while($row = pg_fetch_row($result)){
-	if($row['2'] ==  $pass){
+		if($row['2'] ==  $pass){
 		session_start();
 		$_SESSION['1'] = $usuario;
 		header("Location: contenido.php");
-	}else{
+		}else{
 		echo "Hola " ;
 		header("Location: index.php");
 		exit();
+			}
+		}
 	}
-}
 }else{
 	echo "Hola "; 
 	header("Location: index.php");
