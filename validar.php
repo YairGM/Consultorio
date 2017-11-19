@@ -8,23 +8,24 @@ function pg_connection_string_from_database_url() {
 }
 $pg_conn = pg_connect(pg_connection_string_from_database_url());
 
-$result = pg_query($pg_conn, "SELECT Usuario, Contrasena"
+$result = pg_query($pg_conn, "SELECT Usuario"
      . "FROM usuario");
+
+header("Location: contenido.php");
 
 if (!pg_num_rows($result)) {
   print("Your connection is working, but your database is empty.\nFret not. This is expected for new apps.\n");
 else{
 if($row = pg_fetch_row($result)){
-	if($row['2'] ==  $pass){
+	if($row['Contrasena'] ==  $pass){
 		session_start();
-		$_SESSION['1'] = $usuario;
+		$_SESSION['Usuario'] = $usuario;
 		header("Location: contenido.php");
 	}else{
 		header("Location: index.php");
 		exit();
 	}
-}}
-}else{
+}}}else{
 	header("Location: index.php");
 	exit();
 }
