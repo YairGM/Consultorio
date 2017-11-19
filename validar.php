@@ -18,6 +18,12 @@ if($row = pg_fetch_row($result)){
 		header("Location: contenido.php");
 	}else{
 		//header("Location: index.php");
+		echo "<tr>";
+	    echo "<td>" . $row[0] . "</td>";
+	    echo "<td>" . htmlspecialchars($row[1]) . "</td>";
+	    echo "<td>" . htmlspecialchars($row[2]) . "</td>";
+	    echo "<td>" . htmlspecialchars($row[3]) . "</td>";
+	    echo "</tr>";
 		exit();
 	}
 }else{
