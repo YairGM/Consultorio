@@ -13,24 +13,21 @@ $result = pg_query($pg_conn, "SELECT Usuario, Contrasena"
 
 if (!pg_num_rows($result)) {
   print("Your connection is working, but your database is empty.\nFret not. This is expected for new apps.\n");
-if($row = pg_fetch_row($result)){
+else{
+	while($row = pg_fetch_row($result)){
 	if($row['2'] ==  $pass){
 		session_start();
 		$_SESSION['1'] = $usuario;
 		header("Location: contenido.php");
 	}else{
-		//header("Location: index.php");
-		echo "<tr>";
-	    echo "<td>" . $row[0] . "</td>";
-	    echo "<td>" . htmlspecialchars($row[1]) . "</td>";
-	    echo "<td>" . htmlspecialchars($row[2]) . "</td>";
-	    echo "<td>" . htmlspecialchars($row[3]) . "</td>";
-	    echo "</tr>";
+		echo "Hola " ;
+		header("Location: index.php");
 		exit();
 	}
 }
 }else{
-	//header("Location: index.php");
+	echo "Hola "; 
+	header("Location: index.php");
 	exit();
 }
 ?>
