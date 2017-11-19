@@ -1,8 +1,8 @@
 <?php
-$usuario = $_POST['1'];
-$pass = $_POST['2'];
+$usuario = $_POST['nnombre'];
+$pass = $_POST['npassword'];
 
-echo $usuario ":" $pass;
+echo $usuario, ":", $pass;
 /*
 function pg_connection_string_from_database_url() {
   extract(parse_url($_ENV["DATABASE_URL"]));
