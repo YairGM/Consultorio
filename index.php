@@ -34,7 +34,7 @@
    <tbody>
    </tbody>
   </table>
-  <h2>Modal Login Form</h2>
+  <h2>LOGIN</h2>
 
 <center>
 		<form method="POST" action="validar.php">

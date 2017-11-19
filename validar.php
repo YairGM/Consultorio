@@ -1,4 +1,6 @@
 <?php
+$usuario = $_POST['1'];
+$pass = $_POST['2'];
 
 function pg_connection_string_from_database_url() {
   extract(parse_url($_ENV["DATABASE_URL"]));
@@ -6,13 +8,13 @@ function pg_connection_string_from_database_url() {
 }
 $pg_conn = pg_connect(pg_connection_string_from_database_url());
 
-$result = pg_query($pg_conn, "SELECT Usuario"
+$result = pg_query($pg_conn, "SELECT Usuario, Contrasena"
      . "FROM usuario");
 
 if($row = pg_fetch_row($result)){
-	if($row['2'] ==  $Contrasena){
+	if($row['2'] ==  $pass){
 		session_start();
-		$_SESSION['1'] = $Usuario;
+		$_SESSION['1'] = $usuario;
 		header("Location: contenido.php");
 	}else{
 		header("Location: index.php");
