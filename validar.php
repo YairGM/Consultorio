@@ -29,7 +29,7 @@ if($row = pg_fetch_array($result)){
 		exit();
 	}
 }else{
-	//header("Location: index.php");
+	header("Location: index.php");
 	exit();
 }
 ?>
