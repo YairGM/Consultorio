@@ -13,20 +13,17 @@ $result = pg_query($pg_conn, "SELECT Usuario"
 
 header("Location: contenido.php");
 
-if (!pg_num_rows($result)) {
-  print("Your connection is working, but your database is empty.\nFret not. This is expected for new apps.\n");
-else{
 if($row = pg_fetch_row($result)){
 	if($row['Contrasena'] ==  $pass){
 		session_start();
 		$_SESSION['Usuario'] = $usuario;
 		header("Location: contenido.php");
 	}else{
-		header("Location: index.php");
+		//header("Location: index.php");
 		exit();
 	}
-}}}else{
-	header("Location: index.php");
+}else{
+	//header("Location: index.php");
 	exit();
 }
 ?>
