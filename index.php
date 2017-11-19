@@ -22,25 +22,13 @@
             <li><a href="#consulta">Consulta</a></li>
         </ul>
         </div>
-        <table>
-   <thead>
-    <tr>
-     <th>Employee ID</th>
-     <th>Last Name</th>
-     <th>First Name</th>
-     <th>Title</th>
-    </tr>
-   </thead>
-   <tbody>
-   </tbody>
-  </table>
   <h2>LOGIN</h2>
 
 <center>
 		<form method="POST" action="validar.php">
-			<input type="text" name="nnombre" placeholder="Usuario" />
+			<input type="text" name="1" placeholder="Usuario" />
 			<br />
-			<input type="password" name="npassword" placeholder="Contraseña" />
+			<input type="password" name="2" placeholder="Contraseña" />
 			<br />
 			<button type="submit">Inicar Sesion</button>
 		</form>
