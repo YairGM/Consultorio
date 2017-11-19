@@ -18,7 +18,7 @@ $result = pg_query($pg_conn, "SELECT usuario FROM usuario WHERE usuario='$usuari
 
 if($row = pg_fetch_array($result)){
 
-	if(- $row['2contrasena'] ==  $pass){
+	if(- $row['contrasena'] ==  $pass){
 		session_start();
 		$_SESSION['usuario'] = $usuario;
 		header("Location: contenido.php");
