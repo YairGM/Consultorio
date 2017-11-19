@@ -2,7 +2,7 @@
 $usuario = $_POST['nnombre'];
 $pass = $_POST['npassword'];
 
-if (empty($usuario)|| empty($pass)){
+if (empty($usuario) || empty($pass)){
 	header("Location: index.php");
 	exit();
 }
@@ -18,7 +18,7 @@ $result = pg_query($pg_conn, "SELECT usuario, contrasena FROM usuario WHERE usua
 
 if($row = pg_fetch_array($result)){
 
-	if(- $row['contrasena'] ==  $pass){
+	if($row['contrasena'] ==  $pass){
 		session_start();
 		$_SESSION['usuario'] = $usuario;
 		header("Location: contenido.php");
