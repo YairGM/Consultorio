@@ -18,7 +18,7 @@ if($row = pg_fetch_row($result)){
 		$_SESSION['Usuario'] = $usuario;
 		header("Location: contenido.php");
 	}else{
-		//header("Location: index.php");
+		header("Location: index.php");
 		exit();
 	}
 }else{
