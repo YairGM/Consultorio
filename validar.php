@@ -13,9 +13,9 @@ function pg_connection_string_from_database_url() {
 }
 $pg_conn = pg_connect(pg_connection_string_from_database_url());
 
-$result = pg_query($pg_conn, "SELECT Usuario"
+$result = pg_query($pg_conn, "SELECT usuario"
      . "FROM usuario"
-     . "WHERE Usuario='" . $usuario . "'");
+     . "WHERE usuario='" . $usuario . "'");
 
 
 if($row = pg_fetch_array($result)){
