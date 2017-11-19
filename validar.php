@@ -19,12 +19,11 @@ $result = pg_query($pg_conn, "SELECT usuario FROM usuario WHERE usuario='$usuari
 if($row = pg_fetch_array($result)){
 
 	if(- $row['2'] ==  $pass){
-		header("Location: contenido.php");
 		session_start();
 		$_SESSION['usuario'] = $usuario;
 		header("Location: contenido.php");
 	}else{
-		//header("Location: index.php");
+		header("Location: index.php");
 		exit();
 	}
 }else{
