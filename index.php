@@ -35,7 +35,7 @@
 	</center>
 
         <div class="footer">
-            <p>Footer</p>
+            <p>Hecho con ❤</p>
         </div>
     </div>
 </body>
