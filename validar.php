@@ -12,7 +12,7 @@ $result = pg_query($pg_conn, "SELECT Usuario"
      . "FROM usuario");
 
 
-if($row = pg_fetch_row($result)){
+if($row = pg_fetch_array($result)){
 	if($row['Contrasena'] ==  $pass){
 		session_start();
 		$_SESSION['Usuario'] = $usuario;
