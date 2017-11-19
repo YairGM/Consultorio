@@ -10,9 +10,9 @@ $result = pg_query($pg_conn, "SELECT Usuario"
      . "FROM usuario");
 
 if($row = pg_fetch_row($result)){
-	if($row['Contrasena'] ==  $pass){
+	if($row['Contrasena'] ==  $Contrasena){
 		session_start();
-		$_SESSION['Usuario'] = $usuario;
+		$_SESSION['Usuario'] = $Usuario;
 		header("Location: contenido.php");
 	}else{
 		header("Location: index.php");
