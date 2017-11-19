@@ -29,7 +29,7 @@ else{
 		header("Location: index.php");
 		exit();
 			}
-		}
+		
 	}
 }else{
 	echo "Hola "; 
