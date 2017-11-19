@@ -14,13 +14,14 @@ function pg_connection_string_from_database_url() {
 $pg_conn = pg_connect(pg_connection_string_from_database_url());
 
 $result = pg_query($pg_conn, "SELECT Usuario"
-     . "FROM usuario where Usuario='" . $usuario . "'");
+     . "FROM usuario"
+     . "WHERE Usuario='" . $usuario . "'");
 
 
 if($row = pg_fetch_array($result)){
-	if($row['Contrasena'] ==  $pass){
+	if($row['2'] ==  $pass){
 		session_start();
-		$_SESSION['Usuario'] = $usuario;
+		$_SESSION['usuario'] = $usuario;
 		header("Location: contenido.php");
 	}else{
 		//header("Location: index.php");
