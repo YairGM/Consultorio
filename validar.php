@@ -17,6 +17,7 @@ $result = pg_query($pg_conn, "SELECT usuario FROM usuario WHERE usuario='$usuari
 
 
 if($row = pg_fetch_array($result)){
+	header("Location: contenido.php");
 	if($row['2'] ==  $pass){
 		session_start();
 		$_SESSION['usuario'] = $usuario;
