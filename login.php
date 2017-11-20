@@ -17,9 +17,9 @@
         </div>
         <div class="Menu">
         <ul>
-            <li><a href="#home">Inicio</a></li>
-            <li><a href="#alta">Alta</a></li>
-            <li><a href="#consulta">Consulta</a></li>
+            <li><a href="#home"></a></li>
+            <li><a href="#alta"></a></li>
+            <li><a href="#consulta"></a></li>
         </ul>
         </div>
         <h2>LOGIN</h2>

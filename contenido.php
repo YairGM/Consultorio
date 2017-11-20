@@ -24,7 +24,9 @@ echo "Bienvenido " . $_SESSION['usuario'];
         </div>
         <div class="Menu">
         <ul>
-            
+            <li><a href=".php"></a></li>
+            <li><a href="#alta"></a></li>
+            <li><a href="#consulta"></a></li>
         </ul>
         </div>
 	<center>
