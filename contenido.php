@@ -27,19 +27,19 @@ include 'footer.php';
 			<button type="submit">Registro Servicios</button>
 		</form>
 		<form method="POST" action="ingresos.php">
-			<button type="submit">Registro Ingresos</button>
+			<button type="submit" style="width:400px;">Registro Ingresos</button>
 		</form>
 		<form method="POST" action="egresos.php">
-			<button type="submit">Registro Egresos</button>
+			<button type="submit" style="width:400px;">Registro Egresos</button>
 		</form>
 		<form method="POST" action="consultaI.php">
-			<button type="submit">Consulta Ingresos</button>
+			<button type="submit" style="width:400px;">Consulta Ingresos</button>
 		</form>
 		<form method="POST" action="consultaE.php">
-			<button type="submit">Consulta Egresos</button>
+			<button type="submit" style="width:400px;">Consulta Egresos</button>
 		</form>
 		<form method="POST" action="cerrar.php">
-			<button type="submit">Cerrar sesion</button>
+			<button type="submit" style="width:400px;">Cerrar sesion</button>
 		</form>
 	</center>
     </div>

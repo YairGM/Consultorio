@@ -16,11 +16,11 @@ include 'footer.php';?>
 		<h2>LOGIN</h2>
 	<center>
 		<form method="POST" action="validar.php">
-			<input type="text" style="width:200px;" name="nnombre" placeholder="Usuario" />
+			<input type="text" style="width:400px;" name="nnombre" placeholder="Usuario" />
 			<br/>
-			<input type="password" style="width:200px;" name="npassword" placeholder="Contraseña" />
+			<input type="password" style="width:400px;" name="npassword" placeholder="Contraseña" />
 			<br/>
-			<button type="submit" style="width:200px;">Iniciar Sesion</button>
+			<button type="submit" style="width:400px;">Iniciar Sesion</button>
 		</form>
 	</center>
     </div>

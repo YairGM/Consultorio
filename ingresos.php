@@ -8,15 +8,15 @@ echo "Bienvenido " . $_SESSION['usuario'];
 <h2>Registro de ingresos</h2>
 <center>
 	<form method="POST" action="registrai.php">   
-	<input type="text" name="idingreso" placeholder="Clave" /> 
-    <input type="text" name="servicio" placeholder="Servicio" />
+	<input type="text" style="width:400px;" name="idingreso" placeholder="Clave" /> 
 	<br />
-	<input type="text" name="cantidad" placeholder="Cantidad" />
-
+    <input type="text" style="width:400px;" name="servicio" placeholder="Servicio" />
 	<br />
-	<button type="submit">Guardar ingreso</button></p>     
+	<input type="text" style="width:400px;" name="cantidad" placeholder="Cantidad" />
+	<br />
+	<button type="submit" style="width:400px;">Guardar ingreso</button></p>     
 	</form> 
 	<form method="POST" action="contenido.php">
-		<button type="submit">Volver al menú</button>
+		<button type="submit" style="width:400px;">Volver al menú</button>
 	</form>
 </center>
