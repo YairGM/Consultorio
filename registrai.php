@@ -1,7 +1,6 @@
 <?php 
-session_start();
+echo "Bienvenido " . $_SESSION['usuario'];
 // Recibimos por POST los datos procedentes del formulario 
-
 $servi = $_POST['servicio'];            // Asi recogemos el nombre desde el formulario 
     $serv = strip_tags($servi);    // Eliminamos la etiquetas que puedan existir 
     $n_serv = strlen($serv);      // Contamos el numero de caracteres 
