@@ -8,7 +8,7 @@ include 'footer.php';?>
         
         <center>
 			<form action="login.php">
-    		<button type="submit" style="width:auto;">Iniciar sesion</button>
+    		<button type="submit" style="width:200px;">Iniciar sesion</button>
 		</form>
         </center>
     </div>
