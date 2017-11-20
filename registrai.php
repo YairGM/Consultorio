@@ -4,11 +4,10 @@ echo "hola";
 <?php 
 echo "Bienvenido " . $_SESSION['usuario'];
 // Recibimos por POST los datos procedentes del formulario 
-$servi = $_POST['servicio'];            // Asi recogemos el nombre desde el formulario 
-    $serv = strip_tags($servi);    // Eliminamos la etiquetas que puedan existir 
-    $n_serv = strlen($serv);      // Contamos el numero de caracteres 
+$servi = $_POST["servicio"];            // Asi recogemos el nombre desde el formulario 
+   // Contamos el numero de caracteres 
 
-$canti = $_POST['cantidad'];            // Asi recogemos el email desde el formulario 
+$canti = $_POST["cantidad"];            // Asi recogemos el email desde el formulario 
      if (!is_numeric($canti)) { 
         echo "No son numeros"; 
     }  
@@ -53,7 +52,6 @@ if ($total_car >= 1) {
     echo " 
     Los campos <b>nombre</b> y <b>cantidad</b> no pueden estar vacios.<br /> 
     <a href=\"javascript:history.go(-1)\">Volver</a>"; 
-    header("Location: index.php");
     echo "El usuario no existe";
     exit();
 } 
