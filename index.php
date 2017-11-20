@@ -8,20 +8,8 @@
 
 </head>
 <body>
-
     <div class="container">
-        <div class="page-header">
-            <h2>
-                Consultorio medico
-            </h2>
-        </div>
-        <div class="Menu">
-        <ul>
-            <li><a href="#home"></a></li>
-            <li><a href="#alta"></a></li>
-            <li><a href="#consulta"></a></li>
-        </ul>
-        </div>
+        <?php include 'header.php';?>
         <center>
 			<form action="login.php">
     		<button type="submit" style="width:auto;">Iniciar sesion</button>
@@ -29,7 +17,7 @@
         </center>
       <div class="footer">
             <p>Hecho con ❤</p>
-        </div>
+      </div>
     </div>
 </body>
 </html>>

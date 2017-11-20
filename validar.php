@@ -4,6 +4,7 @@ $pass = $_POST['npassword'];
 
 if (empty($usuario) || empty($pass)){
 	header("Location: login.php");
+	echo "<h2>El usuario y contraseña estan vacios</h2>";
 	exit();
 }
 
@@ -24,10 +25,12 @@ if($row = pg_fetch_array($result)){
 		header("Location: contenido.php");
 	}else{
 		header("Location: login.php");
+		echo "<h2>La contraseña esta incorrecta</h2>";
 		exit();
 	}
 }else{
 	header("Location: login.php");
+	echo "El usuario no existe";
 	exit();
 }
 ?>

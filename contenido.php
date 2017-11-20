@@ -37,7 +37,7 @@ session_start();
 		<form method="POST" action="ingresos.php">
 			<button type="submit">Registro Ingresos</button>
 		</form>
-		<form method="POST" action="egresosgresos.php">
+		<form method="POST" action="egresos.php">
 			<button type="submit">Registro Egresos</button>
 		</form>
 		<form method="POST" action="consultaI.php">
