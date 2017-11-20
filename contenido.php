@@ -2,8 +2,6 @@
 
 session_start();
 
-echo "Bienvenido " . $_SESSION['usuario'];
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -30,16 +28,21 @@ echo "Bienvenido " . $_SESSION['usuario'];
         </ul>
         </div>
 	<center>
-		<form method="POST" action="validar.php">
+	<h2>
+<?php
+	echo "Bienvenido " . $_SESSION['usuario'];
+?>
+	</h2>
+		<form method="POST" action="Ingresos.php">
 			<button type="submit">Registro Ingresos</button>
 		</form>
-		<form>
+		<form method="POST" action="Egresos.php">
 			<button type="submit">Registro Egresos</button>
 		</form>
-		<form>
+		<form method="POST" action="consultaI.php">
 			<button type="submit">Consulta Ingresos</button>
 		</form>
-		<form>
+		<form method="POST" action="consultaE.php">
 			<button type="submit">Consulta Egresos</button>
 		</form>
 	</center>
