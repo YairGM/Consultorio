@@ -5,7 +5,8 @@ echo "hola";
 echo "Bienvenido " . $_SESSION['usuario'];
 // Recibimos por POST los datos procedentes del formulario 
 $servi = $_POST["servicio"];            // Asi recogemos el nombre desde el formulario 
-   // Contamos el numero de caracteres 
+$servicio = strip_tags($servi);  
+$n_servi = strlen($servicioservi);    // Contamos el numero de caracteres 
 
 $canti = $_POST["cantidad"];            // Asi recogemos el email desde el formulario 
      if (!is_numeric($canti)) { 
@@ -17,7 +18,7 @@ $canti = $_POST["cantidad"];            // Asi recogemos el email desde el formu
 $fecha = date("d-m-Y");        // Asi recogemos la fecha 
      // Asi recogemos la hora 
 
-$total_car = $servi * $canti;    // Si alguno de ellos vale 0, $total_car valdrá 0 
+$total_car = $n_servi * $canti;    // Si alguno de ellos vale 0, $total_car valdrá 0 
 
 if ($total_car >= 1) {  
     // Abrimos la conexion a la base de datos 
