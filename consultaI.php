@@ -24,18 +24,20 @@ function pg_connection_string_from_database_url() {
 }
 $pg_conn = pg_connect(pg_connection_string_from_database_url());
 
-$result = pg_query($pg_conn, "SELECT * FROM usuario ");     // Esta linea hace la consulta 
+$result = pg_query($pg_conn, "SELECT * FROM ingreso ");     // Esta linea hace la consulta 
 
-    while ($registro = mysql_fetch_array($result)){  
-echo "  
-    <tr>  
-      <td width='150'>".$registro['id']."</td>  
-      <td width='150'>".$registro['nombre']."</td>  
-      <td width='150'>".$registro['cantidad']."</td>  
-      <td width='150'></td>  
-
-    </tr> ";  
-}  
+if (!pg_num_rows($result)) {
+  print("No hay datos\n");
+} else {
+	while ($row = pg_fetch_row($result)) {
+	    echo "<tr>";
+	    echo "<td>" . $row[0] . "</td>";
+	    echo "<td>" . htmlspecialchars($row[1]) . "</td>";
+	    echo "<td>" . htmlspecialchars($row[2]) . "</td>";
+	    echo "<td>" . htmlspecialchars($row[3]) . "</td>";
+	    echo "</tr>";
+	}
+}
 pg_close($pg_conn); 
 ?>  
    </table>  
