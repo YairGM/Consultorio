@@ -33,10 +33,10 @@ session_start();
 	echo "Bienvenido " . $_SESSION['usuario'];
 ?>
 	</h2>
-		<form method="POST" action="Ingresos.php">
+		<form method="POST" action="ingresos.php">
 			<button type="submit">Registro Ingresos</button>
 		</form>
-		<form method="POST" action="Egresos.php">
+		<form method="POST" action="igresos.php">
 			<button type="submit">Registro Egresos</button>
 		</form>
 		<form method="POST" action="consultaI.php">
@@ -44,6 +44,9 @@ session_start();
 		</form>
 		<form method="POST" action="consultaE.php">
 			<button type="submit">Consulta Egresos</button>
+		</form>
+		<form method="POST" action="cerrar.php">
+			<button type="submit">Cerrar sesion</button>
 		</form>
 	</center>
 	 <div class="footer">
