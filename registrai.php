@@ -6,7 +6,7 @@ echo "Bienvenido " . $_SESSION['usuario'];
 // Recibimos por POST los datos procedentes del formulario 
 $servi = $_POST["servicio"];            // Asi recogemos el nombre desde el formulario 
 $servicio = strip_tags($servi);  
-$n_servi = strlen($servicioservi);    // Contamos el numero de caracteres 
+$n_servi = strlen($servicio);    // Contamos el numero de caracteres 
 
 $canti = $_POST["cantidad"];            // Asi recogemos el email desde el formulario 
      if (!is_numeric($canti)) { 
