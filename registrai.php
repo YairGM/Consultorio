@@ -33,25 +33,24 @@ if ($total_car >= 1) {
     $pg_conn = pg_connect(pg_connection_string_from_database_url());
      
   $sql="INSERT INTO ingreso (id,nombre,cantidad,fecha) VALUES ('$ingre',$servi', '$canti', '$fecha')";
-  pg_query($pg_conn, $sql);
 
-  $result = pg_query($pg_conn, "SELECT * FROM ingreso ");
-    // Cerramos la conexion a la base de datos 
-     
-    // Confirmamos que el registro ha sido insertado con exito 
-     if (!pg_num_rows($result)) {
-        print("No hay datos\n");
-    } else {
-        while ($row = pg_fetch_row($result)) {
-            pg_close($pg_conn);
+
+  if (pg_query($pg_conn,$sql)) {
+            echo "Data entered successfully. ";
+        }
+        else {
+            echo "Data entry unsuccessful. ";
+        }
+
+  pg_close($pg_conn);
+  
         echo " 
         <p>Los datos han sido guardados con exito.</p> 
      
         <p><a href='ingresos.php'>VOLVER ATRÁS</a></p> 
      
         <p><a href='consultaI.php' title='Clic aquí'>Ver los resgistros guardados</a></p> ";
-        }
-    }
+        
 }else{
     echo " 
     Los campos <b>nombre</b> y <b>cantidad</b> no pueden estar vacios.<br /> 
