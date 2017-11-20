@@ -1,5 +1,7 @@
 <?php
-echo "hola";
+include 'head.php';
+include 'header.php';
+include 'footer.php';
 ?>
 <?php 
 echo "Bienvenido " . $_SESSION['usuario'];
@@ -45,17 +47,20 @@ if ($total_car >= 1) {
   pg_close($pg_conn);
   
         echo " 
+        <h2>
         <p>Los datos han sido guardados con exito.</p> 
      
         <p><a href='ingresos.php'>VOLVER ATRÁS</a></p> 
      
-        <p><a href='consultaI.php' title='Clic aquí'>Ver los resgistros guardados</a></p> ";
-        
+        <p><a href='consultaI.php' title='Clic aquí'>Ver los resgistros guardados</a></p> 
+        </h2>";
 }else{
     echo " 
+    <h2>
     Los campos <b>nombre</b> y <b>cantidad</b> no pueden estar vacios.<br /> 
-    <a href=\"ingresos.php\">Volver</a>"; 
-    echo "El usuario no existe";
+    <a href=\"ingresos.php\">Volver</a>
+    </h2>"; 
+    
     exit();
 } 
 ?> 

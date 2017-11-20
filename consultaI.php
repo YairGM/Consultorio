@@ -42,7 +42,7 @@ pg_close($pg_conn);
 ?>  
    </table>  
    <form method="POST" action="ingresos.php">
-		<button type="submit">Registro ingresos</button>
+		<button type="submit">Registro de ingresos</button>
 	</form>
 	<form method="POST" action="contenido.php">
 		<button type="submit">Volver al menú</button>

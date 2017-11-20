@@ -14,6 +14,9 @@ echo "Bienvenido " . $_SESSION['usuario'];
 	<input type="text" name="cantidad" placeholder="Cantidad" />
 
 	<br />
-	<button type="submit">Guardar ingreso</button></p>    
+	<button type="submit">Guardar ingreso</button></p>     
 	</form> 
+	<form method="POST" action="contenido.php">
+		<button type="submit">Volver al menú</button>
+	</form>
 </center>
