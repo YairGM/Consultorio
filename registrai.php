@@ -26,11 +26,10 @@ if ($total_car >= 1) {
     }
     $pg_conn = pg_connect(pg_connection_string_from_database_url());
      
-    $SQL = "INSERT INTO $ingreso (nombre,canidad,fecha) VALUES ('$servi', '$canti', '$fecha')";  
-    pg_query($SQL); 
+  $result = pg_query($pg_conn, "INSERT INTO $ingreso (nombre,canidad,fecha) VALUES ('$servi', '$canti', '$fecha')");  
 
     // Cerramos la conexion a la base de datos 
-    pg_close($dbconn);
+    pg_close($pg_conn);
      
     // Confirmamos que el registro ha sido insertado con exito 
      
@@ -39,16 +38,23 @@ if ($total_car >= 1) {
      
     <p><a href='javascript:history.go(-1)'>VOLVER ATRÁS</a></p> 
      
-    <p><a href='http://www.uterra.com/archcodfuente/demos/id103/lista2.php' title='Clic aquí'>Ver los resgistros  
+    <p><a href='http://www.uterra.com/archcodfuente/demos/id103/lista2.php' title='Clic aquí'>Ver los resgistros guardados</a></p> "; 
      
-    guardados</a></p> 
-    "; 
-     
+     if($row = pg_fetch_array($result)){
+        header("Location: login.php");
+    }else{
+        header("Location: contenido.php");
+        echo "<h2>La contraseña esta incorrecta</h2>";
+        exit();
+    }
+}else{
+    header("Location: login.php");
+    echo "El usuario no existe";
+    exit();
 } else { 
      
     echo " 
     Los campos <b>nombre</b> y <b>cantidad</b> no pueden estar vacios.<br /> 
-    <a href=\"javascript:history.go(-1)\">Volver</a> 
-    "; 
+    <a href=\"javascript:history.go(-1)\">Volver</a>"; 
 } 
 ?> 
