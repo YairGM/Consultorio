@@ -1,6 +1,6 @@
 <?php
 session_start();
-php include 'head.php';
+include 'head.php';
 include 'header.php';
 include 'footer.php';
 ?>
