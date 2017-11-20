@@ -14,8 +14,8 @@ echo "Bienvenido " . $_SESSION['usuario'];
     <tr>  
       <td width='150' style='font-weight: bold'>ID</td>  
       <td width='150' style='font-weight: bold'>NOMBRE</td>  
-      <td width='150' style='font-weight: bold'>cantidad.</td>  
-      <td width='150' style='font-weight: bold'></td>  
+      <td width='150' style='font-weight: bold'>CANTIDAD</td>  
+      <td width='150' style='font-weight: bold'>FECHA</td>  
     </tr>  
 <?php  
 function pg_connection_string_from_database_url() {
@@ -41,6 +41,12 @@ if (!pg_num_rows($result)) {
 pg_close($pg_conn); 
 ?>  
    </table>  
+   <form method="POST" action="ingresos.php">
+		<button type="submit">Registro ingresos</button>
+	</form>
+	<form method="POST" action="contenido.php">
+		<button type="submit">Volver al menú</button>
+	</form>
 </div>  
 </body>  
 
