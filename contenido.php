@@ -29,15 +29,18 @@ echo "Bienvenido " . $_SESSION['usuario'];
             <li><a href="#consulta">Consulta</a></li>
         </ul>
         </div>
-        <h2>LOGIN</h2>
-
 	<center>
 		<form method="POST" action="validar.php">
-			<input type="text" name="nnombre" placeholder="Usuario" />
-			<br />
-			<input type="password" name="npassword" placeholder="Contraseña" />
-			<br />
-			<button type="submit">Iniciar Sesion</button>
+			<button type="submit">Registro Ingresos</button>
+		</form>
+		<form>
+			<button type="submit">Registro Egresos</button>
+		</form>
+		<form>
+			<button type="submit">Consulta Ingresos</button>
+		</form>
+		<form>
+			<button type="submit">Consulta Egresos</button>
 		</form>
 	</center>
 	 <div class="footer">

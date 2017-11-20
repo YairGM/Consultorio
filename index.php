@@ -22,11 +22,12 @@
             <li><a href="#consulta">Consulta</a></li>
         </ul>
         </div>
-        <form action="login.php">
-    		<input type="submit" value="Iniciar sesion"/>
+        <center>
+			<form action="login.php">
+    		<button type="submit" style="width:auto;">Iniciar sesion</button>
 		</form>
-		<button onclick="login.php" style="width:auto;">Login</button>
-        <div class="footer">
+        </center>
+      <div class="footer">
             <p>Hecho con ❤</p>
         </div>
     </div>
