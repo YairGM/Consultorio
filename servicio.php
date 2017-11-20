@@ -2,9 +2,7 @@
 session_start();
 include 'head.php';
 include 'header.php';
-include 'footer.php';;
+include 'footer.php';
 echo "Bienvenido " . $_SESSION['usuario'];
-
 ?>
-<h2>Registro de egresos</h2>
-
+<h2>Registro de servicios</h2>

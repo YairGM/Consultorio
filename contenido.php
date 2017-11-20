@@ -21,6 +21,9 @@ session_start();
 	echo "Bienvenido " . $_SESSION['usuario'];
 	?>
 	</h2>
+		<form method="POST" action="servicio.php">
+			<button type="submit">Registro Servicios</button>
+		</form>
 		<form method="POST" action="ingresos.php">
 			<button type="submit">Registro Ingresos</button>
 		</form>

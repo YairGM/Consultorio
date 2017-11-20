@@ -6,4 +6,5 @@ include 'footer.php';
 echo "Bienvenido " . $_SESSION['usuario'];
 echo "\nConsulta de egresos";
 ?>
+<h2>Consulta de egresos</h2>
 

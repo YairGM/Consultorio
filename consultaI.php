@@ -4,6 +4,6 @@ include 'head.php';
 include 'header.php';
 include 'footer.php';
 echo "Bienvenido " . $_SESSION['usuario'];
-echo "\nConsulta de ingresos";
-?>
 
+?>
+<h2>Consulta de ingresos</h2>
