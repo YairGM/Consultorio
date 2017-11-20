@@ -24,7 +24,7 @@ include 'footer.php';
 	?>
 	</h2>
 		<form method="POST" action="servicio.php">
-			<button type="submit">Registro Servicios</button>
+			<button type="submit" style="width:400px;">Registro Servicios</button>
 		</form>
 		<form method="POST" action="ingresos.php">
 			<button type="submit" style="width:400px;">Registro Ingresos</button>
