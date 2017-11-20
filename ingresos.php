@@ -12,6 +12,6 @@ echo "Bienvenido " . $_SESSION['usuario'];
 	<br />
 	<input type="text" name="cantidad" placeholder="Cantidad" />
 	<br />
-	<button type="submit">Guardar ingreso</button>1"></p>    
+	<button type="submit">Guardar ingreso</button></p>    
 	</form> 
 </center>
