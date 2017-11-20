@@ -18,7 +18,7 @@ $canti = $_POST["cantidad"];            // Asi recogemos el email desde el formu
 $fecha = date("d-m-Y");        // Asi recogemos la fecha 
      // Asi recogemos la hora 
 
-$total_car = $servi * $canti;    // Si alguno de ellos vale 0, $total_car valdrá 0 
+$total_car = $n_servi * $canti;    // Si alguno de ellos vale 0, $total_car valdrá 0 
 
 if ($total_car >= 1) {  
     // Abrimos la conexion a la base de datos 
