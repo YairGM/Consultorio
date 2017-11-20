@@ -4,15 +4,15 @@ echo "hola";
 <?php 
 echo "Bienvenido " . $_SESSION['usuario'];
 // Recibimos por POST los datos procedentes del formulario 
-$ingre = $_POST["idingreso"];   
+$ingre = $_POST['idingreso'];   
 $ingreso = strip_tags($ingre); // Asi recogemos el nombre desde el formulario 
 $n_ingre = strlen($ingreso); 
 
-$servi = $_POST["servicio"];   
+$servi = $_POST['servicio'];   
 $servicio = strip_tags($servi); // Asi recogemos el nombre desde el formulario 
 $n_servi = strlen($servicio);    // Contamos el numero de caracteres 
 
-$canti = $_POST["cantidad"];            // Asi recogemos el email desde el formulario 
+$canti = $_POST['cantidad'];            // Asi recogemos el email desde el formulario 
      if (!is_numeric($canti)) { 
         echo "No son numeros"; 
     }  
@@ -33,7 +33,7 @@ if ($total_car >= 1) {
     $pg_conn = pg_connect(pg_connection_string_from_database_url());
      
   $sql="INSERT INTO ingreso (id,nombre,cantidad,fecha) VALUES ('$ingre',$servi', '$canti', '$fecha')";
-
+  pg_query($pg_conn, $sql);
 
   if (pg_query($pg_conn,$sql)) {
             echo "Data entered successfully. ";
