@@ -23,11 +23,11 @@ if($row = pg_fetch_array($result)){
 		$_SESSION['usuario'] = $usuario;
 		header("Location: contenido.php");
 	}else{
-		header("Location: index.php");
+		header("Location: login.php");
 		exit();
 	}
 }else{
-	header("Location: index.php");
+	header("Location: login.php");
 	exit();
 }
 ?>

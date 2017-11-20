@@ -25,6 +25,7 @@
         <form action="login.php">
     		<input type="submit" value="Iniciar sesion"/>
 		</form>
+		<button onclick="login.php" style="width:auto;">Login</button>
         <div class="footer">
             <p>Hecho con ❤</p>
         </div>
