@@ -1,5 +1,8 @@
 <?php
 session_start();
+<?php include 'head.php';
+include 'header.php';
+include 'footer.php';?>
 ?>
 <!DOCTYPE html>
 <html>
@@ -13,7 +16,6 @@ session_start();
 <body>
 
     <div class="container">
-    <?php include 'header.php';?>
     <center>
 	<h2>
 	<?php
@@ -40,7 +42,6 @@ session_start();
 			<button type="submit">Cerrar sesion</button>
 		</form>
 	</center>
-	<?php include 'footer.php';?>
     </div>
 </body>
 </html>>

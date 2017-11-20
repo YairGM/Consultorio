@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<?php include 'head.php';
+include 'header.php';
+include 'footer.php';?>
 <html>
 <head>
     <meta charset="utf-8">
@@ -10,7 +13,6 @@
 <body>
 
     <div class="container">
-     <?php include 'header.php';?>
 		<h2>LOGIN</h2>
 	<center>
 		<form method="POST" action="validar.php">
@@ -21,7 +23,6 @@
 			<button type="submit">Iniciar Sesion</button>
 		</form>
 	</center>
-	<?php include 'footer.php';?>
     </div>
 </body>
 </html>>
