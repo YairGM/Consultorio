@@ -50,9 +50,9 @@ if ($total_car >= 1) {
         <h2>
         <p>Los datos han sido guardados con exito.</p> 
      
-        <p><a href='ingresos.php'>VOLVER ATRÁS</a></p> 
+        <p><a href='egresos.php'>VOLVER ATRÁS</a></p> 
      
-        <p><a href='consultaI.php' title='Clic aquí'>Ver los resgistros guardados</a></p> 
+        <p><a href='consultaE.php' title='Clic aquí'>Ver los resgistros guardados</a></p> 
         </h2>";
 }else{
     echo " 
