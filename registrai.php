@@ -30,6 +30,13 @@ if ($total_car >= 1) {
      
     $query= "INSERT INTO $ingreso (nombre,canidad,fecha) VALUES ('$servi', '$canti', '$fecha')");  
     
+    $result = pg_query($pg_conn, $query) or die('ERROR AL INSERTAR DATOS: ' . pg_last_error());
+
+    $cmdtuples = pg_affected_rows($result);
+    echo $cmdtuples . " datos registrados.\n"
+    
+    pg_free_result($result);
+
     // Cerramos la conexion a la base de datos 
     pg_close($pg_conn);
      
@@ -41,7 +48,6 @@ if ($total_car >= 1) {
     <p><a href='javascript:history.go(-1)'>VOLVER ATRÁS</a></p> 
      
     <p><a href='http://www.uterra.com/archcodfuente/demos/id103/lista2.php' title='Clic aquí'>Ver los resgistros guardados</a></p> "; 
-    
 }else{
     echo " 
     Los campos <b>nombre</b> y <b>cantidad</b> no pueden estar vacios.<br /> 
