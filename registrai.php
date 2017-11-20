@@ -28,14 +28,7 @@ if ($total_car >= 1) {
     }
     $pg_conn = pg_connect(pg_connection_string_from_database_url());
      
-  $query="INSERT INTO $ingreso (nombre,canidad,fecha) VALUES ('$servi', '$canti', '$fecha')";
-  $result = pg_query($pg_conn, $query) or die('ERROR AL INSERTAR DATOS: ' . pg_last_error()  
-
-    $cmdtuples = pg_affected_rows($result);
-    echo $cmdtuples . " datos registrados.\n";
-
-    pg_free_result($result);
-
+  $query="INSERT INTO $ingreso (nombre,cantidad,fecha) VALUES ('$servi', '$canti', '$fecha')";
     // Cerramos la conexion a la base de datos 
     pg_close($pg_conn);
      
