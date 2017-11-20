@@ -28,7 +28,7 @@ if ($total_car >= 1) {
     }
     $pg_conn = pg_connect(pg_connection_string_from_database_url());
      
-  $sql="INSERT INTO $ingreso (nombre,cantidad,fecha) VALUES ('$servi', '$canti', '$fecha')";
+  $sql="INSERT INTO ingreso (nombre,cantidad,fecha) VALUES ('$servi', '$canti', '$fecha')";
   pg_query( $pg_connect, $sql );
     // Cerramos la conexion a la base de datos 
     pg_close($pg_conn);
@@ -40,7 +40,7 @@ if ($total_car >= 1) {
      
     <p><a href='javascript:history.go(-1)'>VOLVER ATRÁS</a></p> 
      
-    <p><a href='http://www.uterra.com/archcodfuente/demos/id103/lista2.php' title='Clic aquí'>Ver los resgistros guardados</a></p> "; 
+    <p><a href='consultaI.php' title='Clic aquí'>Ver los resgistros guardados</a></p> "; 
 }else{
     echo " 
     Los campos <b>nombre</b> y <b>cantidad</b> no pueden estar vacios.<br /> 
