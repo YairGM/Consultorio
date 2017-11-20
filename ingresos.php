@@ -7,7 +7,7 @@ echo "Bienvenido " . $_SESSION['usuario'];
 ?>
 <h2>Registro de ingresos</h2>
 <center>
-	<form method="POST" action="">    
+	<form method="POST" action="registrai.php">    
     <input type="text" name="servicio" placeholder="Servicio" />
 	<br />
 	<input type="text" name="cantidad" placeholder="Cantidad" />
