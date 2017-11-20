@@ -1,5 +1,6 @@
 <?php
 session_start();
-echo "Consulta de egresos";
+echo "Bienvenido " . $_SESSION['usuario'];
+echo "\nConsulta de egresos";
 ?>
 

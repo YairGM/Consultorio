@@ -30,13 +30,14 @@ session_start();
 	<center>
 	<h2>
 <?php
+	session_start();
 	echo "Bienvenido " . $_SESSION['usuario'];
 ?>
 	</h2>
 		<form method="POST" action="ingresos.php">
 			<button type="submit">Registro Ingresos</button>
 		</form>
-		<form method="POST" action="igresos.php">
+		<form method="POST" action="egresosgresos.php">
 			<button type="submit">Registro Egresos</button>
 		</form>
 		<form method="POST" action="consultaI.php">
