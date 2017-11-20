@@ -22,18 +22,9 @@
             <li><a href="#consulta">Consulta</a></li>
         </ul>
         </div>
-  <h2>LOGIN</h2>
-
-<center>
-		<form method="POST" action="validar.php">
-			<input type="text" name="nnombre" placeholder="Usuario" />
-			<br />
-			<input type="password" name="npassword" placeholder="Contraseña" />
-			<br />
-			<button type="submit">Inicar Sesion</button>
+        <form action="login.php">
+    		<input type="submit" value="Iniciar sesion"/>
 		</form>
-	</center>
-
         <div class="footer">
             <p>Hecho con ❤</p>
         </div>
