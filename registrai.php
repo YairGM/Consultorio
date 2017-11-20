@@ -1,3 +1,6 @@
+<?php
+echo "hola";
+?>
 <?php 
 echo "Bienvenido " . $_SESSION['usuario'];
 // Recibimos por POST los datos procedentes del formulario 
@@ -40,20 +43,18 @@ if ($total_car >= 1) {
     <p><a href='http://www.uterra.com/archcodfuente/demos/id103/lista2.php' title='Clic aquí'>Ver los resgistros guardados</a></p> "; 
      
      if($row = pg_fetch_array($result)){
-        header("Location: login.php");
+        header("Location: contenido.php");
     }else{
         header("Location: contenido.php");
         echo "<h2>La contraseña esta incorrecta</h2>";
         exit();
     }
 }else{
-    header("Location: login.php");
-    echo "El usuario no existe";
-    exit();
-} else { 
-     
     echo " 
     Los campos <b>nombre</b> y <b>cantidad</b> no pueden estar vacios.<br /> 
     <a href=\"javascript:history.go(-1)\">Volver</a>"; 
+    header("Location: index.php");
+    echo "El usuario no existe";
+    exit();
 } 
 ?> 
