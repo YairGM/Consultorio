@@ -1,8 +1,8 @@
 <?php
 session_start();
-<?php include 'head.php';
+php include 'head.php';
 include 'header.php';
-include 'footer.php';?>
+include 'footer.php';
 ?>
 <!DOCTYPE html>
 <html>
