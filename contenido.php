@@ -38,6 +38,7 @@ session_start();
 			<button type="submit">Cerrar sesion</button>
 		</form>
 	</center>
+	<?php include 'footer.php';?>
     </div>
 </body>
 </html>>

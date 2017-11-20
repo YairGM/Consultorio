@@ -10,10 +10,8 @@
 <body>
 
     <div class="container">
-     <?php include 'header.php'
-        include 'footer.php';?>
-
-    <h2>LOGIN</h2>
+     <?php include 'header.php';?>
+		<h2>LOGIN</h2>
 	<center>
 		<form method="POST" action="validar.php">
 			<input type="text" name="nnombre" placeholder="Usuario" />
@@ -23,7 +21,7 @@
 			<button type="submit">Iniciar Sesion</button>
 		</form>
 	</center>
-
+	<?php include 'footer.php';?>
     </div>
 </body>
 </html>>
