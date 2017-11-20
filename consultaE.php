@@ -41,8 +41,8 @@ if (!pg_num_rows($result)) {
 pg_close($pg_conn); 
 ?>  
    </table>  
-   <form method="POST" action="ingresos.php">
-		<button type="submit">Registro de ingresos</button>
+   <form method="POST" action="egresos.php">
+		<button type="submit">Registro de egresos</button>
 	</form>
 	<form method="POST" action="contenido.php">
 		<button type="submit">Volver al menú</button>

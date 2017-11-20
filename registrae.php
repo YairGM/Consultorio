@@ -34,10 +34,10 @@ if ($total_car >= 1) {
     }
     $pg_conn = pg_connect(pg_connection_string_from_database_url());
      
-  $sql="INSERT INTO egreso (id,concepto,cantidad,fecha) VALUES ('$ingr','$conce', '$cant', '$fecha')";
+  $pgsql="INSERT INTO egreso (id,concepto,cantidad,fecha) VALUES ('$ingr','$conce', '$cant', '$fecha')";
 
 
-  if (pg_query($pg_conn,$sql)) {
+  if (pg_query($pg_conn,$pgsql)) {
             echo "Data entered successfully. ";
         }
         else {
