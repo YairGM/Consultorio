@@ -4,8 +4,8 @@ echo "hola";
 <?php 
 echo "Bienvenido " . $_SESSION['usuario'];
 // Recibimos por POST los datos procedentes del formulario 
-$servi = $_POST["servicio"];            // Asi recogemos el nombre desde el formulario 
-$servicio = strip_tags($servi);  
+$servi = $_POST["servicio"];   
+$servicio = strip_tags($servi); // Asi recogemos el nombre desde el formulario 
 $n_servi = strlen($servicio);    // Contamos el numero de caracteres 
 
 $canti = $_POST["cantidad"];            // Asi recogemos el email desde el formulario 
@@ -18,7 +18,7 @@ $canti = $_POST["cantidad"];            // Asi recogemos el email desde el formu
 $fecha = date("d-m-Y");        // Asi recogemos la fecha 
      // Asi recogemos la hora 
 
-$total_car = $n_servi * $canti;    // Si alguno de ellos vale 0, $total_car valdrá 0 
+$total_car = $servi * $canti;    // Si alguno de ellos vale 0, $total_car valdrá 0 
 
 if ($total_car >= 1) {  
     // Abrimos la conexion a la base de datos 
@@ -28,14 +28,7 @@ if ($total_car >= 1) {
     }
     $pg_conn = pg_connect(pg_connection_string_from_database_url());
      
-    $query= "INSERT INTO $ingreso (nombre,canidad,fecha) VALUES ('$servi', '$canti', '$fecha')");  
-    
-    $result = pg_query($pg_conn, $query) or die('ERROR AL INSERTAR DATOS: ' . pg_last_error());
-
-    $cmdtuples = pg_affected_rows($result);
-    echo $cmdtuples . " datos registrados.\n"
-    
-    pg_free_result($result);
+  $result = pg_query($pg_conn, "INSERT INTO $ingreso (nombre,canidad,fecha) VALUES ('$servi', '$canti', '$fecha')");  
 
     // Cerramos la conexion a la base de datos 
     pg_close($pg_conn);
@@ -48,6 +41,14 @@ if ($total_car >= 1) {
     <p><a href='javascript:history.go(-1)'>VOLVER ATRÁS</a></p> 
      
     <p><a href='http://www.uterra.com/archcodfuente/demos/id103/lista2.php' title='Clic aquí'>Ver los resgistros guardados</a></p> "; 
+     
+     if($row = pg_fetch_array($result)){
+        header("Location: contenido.php");
+    }else{
+        header("Location: contenido.php");
+        echo "<h2>La contraseña esta incorrecta</h2>";
+        exit();
+    }
 }else{
     echo " 
     Los campos <b>nombre</b> y <b>cantidad</b> no pueden estar vacios.<br /> 
