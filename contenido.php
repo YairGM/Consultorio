@@ -1,7 +1,5 @@
 <?php
-
 session_start();
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -15,24 +13,14 @@ session_start();
 <body>
 
     <div class="container">
-        <div class="page-header">
-            <h2>
-                Consultorio medico
-            </h2>
-        </div>
-        <div class="Menu">
-        <ul>
-            <li><a href=".php"></a></li>
-            <li><a href="#alta"></a></li>
-            <li><a href="#consulta"></a></li>
-        </ul>
-        </div>
-	<center>
+    <?php include 'header.php'
+        	include 'footer.php';?>
+    <center>
 	<h2>
-<?php
+	<?php
 	session_start();
 	echo "Bienvenido " . $_SESSION['usuario'];
-?>
+	?>
 	</h2>
 		<form method="POST" action="ingresos.php">
 			<button type="submit">Registro Ingresos</button>
@@ -50,9 +38,6 @@ session_start();
 			<button type="submit">Cerrar sesion</button>
 		</form>
 	</center>
-	 <div class="footer">
-      <p>Hecho con ❤</p>
-     </div>
     </div>
 </body>
 </html>>

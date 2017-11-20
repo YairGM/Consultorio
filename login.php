@@ -10,20 +10,10 @@
 <body>
 
     <div class="container">
-        <div class="page-header">
-            <h2>
-                Consultorio medico
-            </h2>
-        </div>
-        <div class="Menu">
-        <ul>
-            <li><a href="#home"></a></li>
-            <li><a href="#alta"></a></li>
-            <li><a href="#consulta"></a></li>
-        </ul>
-        </div>
-        <h2>LOGIN</h2>
+     <?php include 'header.php'
+        include 'footer.php';?>
 
+    <h2>LOGIN</h2>
 	<center>
 		<form method="POST" action="validar.php">
 			<input type="text" name="nnombre" placeholder="Usuario" />
@@ -33,9 +23,7 @@
 			<button type="submit">Iniciar Sesion</button>
 		</form>
 	</center>
-	 <div class="footer">
-      <p>Hecho con ❤</p>
-     </div>
+
     </div>
 </body>
 </html>>

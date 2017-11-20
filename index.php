@@ -9,15 +9,13 @@
 </head>
 <body>
     <div class="container">
-        <?php include 'header.php';?>
+        <?php include 'header.php'
+        	include 'footer.php';?>
         <center>
 			<form action="login.php">
     		<button type="submit" style="width:auto;">Iniciar sesion</button>
 		</form>
         </center>
-      <div class="footer">
-            <p>Hecho con ❤</p>
-      </div>
     </div>
 </body>
 </html>>
