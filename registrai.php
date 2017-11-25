@@ -12,7 +12,7 @@ $n_ingre = strlen($ingreso);
 
 $foli = $_POST['folio'];   
 $folio = strip_tags($foli); // Asi recogemos el nombre desde el formulario 
-$folio = strlen($folio); 
+$n_folio = strlen($folio); 
 
 $servi = $_POST['servicio'];   
 $servicio = strip_tags($servi); // Asi recogemos el nombre desde el formulario 
@@ -38,7 +38,7 @@ if ($total_car >= 1) {
     }
     $pg_conn = pg_connect(pg_connection_string_from_database_url());
      
-  $sql="INSERT INTO ingreso (id,nombre,cantidad,foliorec) VALUES ('$ingre','$servi', '$canti','$foli', '$fecha')";
+  $sql="INSERT INTO ingreso (id,nombre,cantidad,fecha,foliore) VALUES ('$ingre','$servi', '$canti', '$fecha','$foli')";
 
 
   if (pg_query($pg_conn,$sql)) {
