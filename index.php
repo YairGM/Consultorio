@@ -4,6 +4,7 @@ include 'head.php';
 include 'header.php';
 include 'footer.php';?>
 <html>
+<link rel="stylesheet" href="stylee.css">
     <body>
     <div class="container">
         
