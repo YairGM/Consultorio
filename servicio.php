@@ -12,7 +12,7 @@ echo "Bienvenido " . $_SESSION['usuario'];
 	<button type="submit" style="width:400px;">Registro Consulta</button>
 	<br />
   	</form>
-  	<form method="POST" action="venta.php">   
+  	<form method="POST" action="ingresos.php">   
 	<button type="submit" style="width:400px;">Registro Venta</button>
 	<br/>
 	</form> 

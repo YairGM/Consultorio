@@ -12,7 +12,7 @@ echo "Bienvenido " . $_SESSION['usuario'];
 	<br />
 	<input type="text" style="width:400px;" name="folio" placeholder="Folio receta" />
 	<br/>
-    <input type="text" style="width:400px;" name="servicio" placeholder="Servicio" />
+    <input type="text" style="width:400px;" name="servicio" placeholder="Concepto" />
 	<br />
 	<input type="text" style="width:400px;" name="cantidad" placeholder="Cantidad" />
 	<br />
