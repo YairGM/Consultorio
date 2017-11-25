@@ -13,7 +13,8 @@ echo "Bienvenido " . $_SESSION['usuario'];
   <table border='1' cellpadding='0' cellspacing='0' width='600' bgcolor='#F6F6F6' bordercolor='#FFFFFF'>  
     <tr>  
       <td width='150' style='font-weight: bold'>ID</td>  
-      <td width='150' style='font-weight: bold'>NOMBRE</td>  
+      <td width='150' style='font-weight: bold'>FOLIO RECETA</td>  
+      <td width='150' style='font-weight: bold'>CONCEPTO</td>  
       <td width='150' style='font-weight: bold'>CANTIDAD</td>  
       <td width='150' style='font-weight: bold'>FECHA</td>  
     </tr>  
@@ -32,6 +33,7 @@ if (!pg_num_rows($result)) {
 	while ($row = pg_fetch_row($result)) {
 	    echo "<tr>";
 	    echo "<td>" . $row[0] . "</td>";
+	    echo "<td>" . htmlspecialchars($row[4]) . "</td>";
 	    echo "<td>" . htmlspecialchars($row[1]) . "</td>";
 	    echo "<td>" . htmlspecialchars($row[2]) . "</td>";
 	    echo "<td>" . htmlspecialchars($row[3]) . "</td>";
