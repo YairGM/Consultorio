@@ -60,7 +60,7 @@ if ($total_car >= 1) {
 }else{
     echo " 
     <h2>
-    Los campos <b>nombre</b> y <b>cantidad</b> no pueden estar vacios.<br /> 
+    Los campos <b>Clave</b>,<b>Concepto</b> y <b>cantidad</b> no pueden estar vacios.<br /> 
     <a href=\"ingresos.php\">Volver</a>
     </h2>"; 
     
