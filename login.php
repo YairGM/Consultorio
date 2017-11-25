@@ -13,7 +13,7 @@ include 'footer.php';?>
 <body>
 
     <div class="container">
-		<h2>LOGIN</h2>
+		<h2>Iniciar sesion</h2>
 	<center>
 		<form method="POST" action="validar.php">
 			<input type="text" style="width:400px;" name="nnombre" placeholder="Usuario" />
