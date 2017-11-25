@@ -79,8 +79,8 @@ if ($total_car >= 1) {
 }else{
     echo " 
     <h2>
-    Los campos <b>nombre</b> y <b>cantidad</b> no pueden estar vacios.<br /> 
-    <a href=\"ingresos.php\">Volver</a>
+    Se deben llenar todos los campos.<br /> 
+    <a href=\"consulta.php\">Volver</a>
     </h2>"; 
     
     exit();

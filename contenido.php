@@ -33,13 +33,13 @@ include 'footer.php';
 			<button type="submit" style="width:400px;">Registro Egresos</button>
 		</form>
 		<form method="POST" action="consultaI.php">
-			<button type="submit" style="width:400px;">Consulta Ingresos</button>
+			<button type="submit" style="width:400px;background-color:DodgerBlue;">Consulta Ingresos</button>
 		</form>
 		<form method="POST" action="consultaE.php">
-			<button type="submit" style="width:400px;">Consulta Egresos</button>
+			<button type="submit" style="width:400px;background-color:DodgerBlue;">Consulta Egresos</button>
 		</form>
 		<form method="POST" action="cerrar.php">
-			<button type="submit" style="width:400px;">Cerrar sesion</button>
+			<button type="submit" style="width:400px;background-color:Tomato;">Cerrar sesion</button>
 		</form>
 	</center>
     </div>

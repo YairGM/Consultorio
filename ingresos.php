@@ -19,6 +19,6 @@ echo "Bienvenido " . $_SESSION['usuario'];
 	<button type="submit" style="width:400px;">Guardar ingreso</button></p>     
 	</form> 
 	<form method="POST" action="contenido.php">
-		<button type="submit" style="width:400px;">Volver al menú</button>
+		<button type="submit" style="width:400px;background-color:#4db8ff;">Volver al menú</button>
 	</form>
 </center>

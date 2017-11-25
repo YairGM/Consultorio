@@ -6,7 +6,7 @@ include 'footer.php';
 echo "Bienvenido " . $_SESSION['usuario'];
 
 ?>
-<h2>Consulta de ingresos</h2>
+<h2>Consultas medicas</h2>
 
 <body>  
 <div align='center'>  
@@ -41,11 +41,11 @@ if (!pg_num_rows($result)) {
 pg_close($pg_conn); 
 ?>  
    </table>  
-   <form method="POST" action="ingresos.php">
-		<button type="submit" style="width:400px;">Registro de ingresos</button>
+   <form method="POST" action="consulta.php">
+		<button type="submit" style="width:400px;">Registro de consulta medica</button>
 	</form>
 	<form method="POST" action="contenido.php">
-		<button type="submit" style="width:400px;">Volver al menú</button>
+		<button type="submit" style="width:400px;background-color:#4db8ff;">Volver al menú</button>
 	</form>
 </div>  
 </body>  
