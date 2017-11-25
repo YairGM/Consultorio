@@ -5,7 +5,7 @@ include 'header.php';
 include 'footer.php';
 echo "Bienvenido " . $_SESSION['usuario'];
 ?>
-<h2>Registro de ingresos</h2>
+<h2>Registro de consultas medicas</h2>
 <center>
 	<form method="POST" action="registracon.php">   
 	<input type="text" style="width:400px;" name="norec" placeholder="Folio receta" /> 

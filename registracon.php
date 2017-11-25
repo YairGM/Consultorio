@@ -1,4 +1,4 @@
-?php
+<?php
 include 'head.php';
 include 'header.php';
 include 'footer.php';
@@ -56,7 +56,7 @@ if ($total_car >= 1) {
     }
     $pg_conn = pg_connect(pg_connection_string_from_database_url());
      
-  $sql="INSERT INTO paciente (receta,paciente,ap,am,edad,peso,alergias,consulta) VALUES ('$noreceta','$nombrepac','$ap', '$am', '$edad', '$peso', '$aler', '$dconsulta')";
+  $sql="INSERT INTO paciente (receta,paciente,ap,am,edad,peso,alegias,consulta) VALUES ('$noreceta','$nombrepac','$ap', '$am', '$edad', '$peso', '$aler', '$dconsulta')";
 
 
   if (pg_query($pg_conn,$sql)) {
