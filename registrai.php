@@ -37,7 +37,7 @@ if ($total_car >= 1) {
     }
     $pg_conn = pg_connect(pg_connection_string_from_database_url());
      
-  $sql="INSERT INTO ingreso (id,nombre,cantidad,fecha,foliore) VALUES ('$ingre','$servi', '$canti', '$fecha','$foli')";
+  $sql="INSERT INTO venta (idv,folioreceta,concepto,cantidad,fecha) VALUES ('$ingre','$foli','$servi', '$canti', '$fecha')";
 
 
   if (pg_query($pg_conn,$sql)) {
