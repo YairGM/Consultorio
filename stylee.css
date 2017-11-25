@@ -1,7 +1,7 @@
 .page-header{
 	position: relative;
     background-color: #12CDAE;
-    height: 68px;
+    height: 90px;
     line-height: 50px;
     overflow: hidden;
     z-index: 2;
@@ -11,9 +11,12 @@
 h1{
 	font-weight: bold; 
 	color: #494847;
-	font-size: 72px;
+	font-size: 50px;
+    text-align: center;
+
 }
 h2{
+    font-size: 40px;
 	text-align: center;
 }
 ul {
