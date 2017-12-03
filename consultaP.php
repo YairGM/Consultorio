@@ -16,6 +16,7 @@ echo "Bienvenido " . $_SESSION['usuario'];
       <td width='150' style='font-weight: bold'>NOMBRE</td>  
       <td width='150' style='font-weight: bold'>APELLIDO PATERNO</td>  
       <td width='150' style='font-weight: bold'>APELLIDO MATERNO</td>  
+      <td width='150' style='font-weight: bold'>EDAD</td>  
     </tr>  
 <?php  
 function pg_connection_string_from_database_url() {
@@ -35,6 +36,7 @@ if (!pg_num_rows($result)) {
 	    echo "<td>" . htmlspecialchars($row[1]) . "</td>";
 	    echo "<td>" . htmlspecialchars($row[2]) . "</td>";
 	    echo "<td>" . htmlspecialchars($row[3]) . "</td>";
+	    echo "<td>" . htmlspecialchars($row[4]) . "</td>";
 	    echo "</tr>";
 	}
 }

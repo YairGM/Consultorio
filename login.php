@@ -13,14 +13,14 @@ include 'footer.php';?>
 <body>
 
     <div class="container">
-		<h2>Iniciar sesion</h2>
+		<h2>Iniciar sesión</h2>
 	<center>
 		<form method="POST" action="validar.php">
 			<input type="text" style="width:400px;" name="nnombre" placeholder="Usuario" />
 			<br/>
 			<input type="password" style="width:400px;" name="npassword" placeholder="Contraseña" />
 			<br/>
-			<button type="submit" style="width:400px;">Iniciar Sesion</button>
+			<button type="submit" style="width:400px;">Iniciar Sesión</button>
 		</form>
 	</center>
     </div>

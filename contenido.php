@@ -38,8 +38,11 @@ include 'footer.php';
 		<form method="POST" action="consultaE.php">
 			<button type="submit" style="width:400px;background-color:DodgerBlue;">Consulta Egresos</button>
 		</form>
+		<form method="POST" action="consultaP.php">
+			<button type="submit" style="width:400px;background-color:DodgerBlue;">Consultas medicas</button>
+		</form>
 		<form method="POST" action="cerrar.php">
-			<button type="submit" style="width:400px;background-color:Tomato;">Cerrar sesion</button>
+			<button type="submit" style="width:400px;background-color:Tomato;">Cerrar sesión</button>
 		</form>
 	</center>
     </div>
