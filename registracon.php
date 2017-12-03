@@ -24,7 +24,8 @@ $n_paciente = strlen($nombrepaciente);    // Contamos el numero de caracteres
           { 
                 echo " 
                     <h2>
-                    El nombre solo acepta letras.<br /> 
+                    El campo nombre solo acepta letras.<br /> 
+                    <a href=\"consulta.php\">Volver</a>
                     </h2>";
                 return true; // Error uno de los caracteres no hace parte de la expresión regular 
           } 
