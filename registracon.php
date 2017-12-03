@@ -15,19 +15,6 @@ $nombrepac = $_POST['nombrep'];
 $nombrepaciente = strip_tags($nombrepac); // Asi recogemos el nombre desde el formulario 
 $n_paciente = strlen($nombrepaciente);    // Contamos el numero de caracteres 
 
-$patron_texto = "/^[a-zA-ZáéíóúÁÉÍÓÚäëïöüÄËÏÖÜàèìòùÀÈÌÒÙ\s]+$/";
-if( preg_match($patron_texto, $nombrepac){
-                    
-                }
-                else{
-                   
-                    echo " 
-                    <h2>
-                    El nombre sólo puede contener letras y espacios.<br /> 
-                    <a href=\"consulta.php\">Volver</a>
-                    </h2>"; 
-            }
-
 
 $ap = $_POST['ap'];   
 $apellidop = strip_tags($ap); // Asi recogemos el nombre desde el formulario 
