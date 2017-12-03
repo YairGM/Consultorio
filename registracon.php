@@ -42,8 +42,8 @@ $total_car = $n_receta * $n_paciente* $n_ap * $n_am * $edad * $peso * $n_aler * 
 if ($total_car >= 1) {  
 if (preg_match($permitidos,$nombrepac))
           {
-            echo "HOLA";
-                return false; // Campo permitido 
+            echo "HOLAn";
+                 // Campo permitido 
           } 
           else 
           { 
@@ -52,12 +52,12 @@ if (preg_match($permitidos,$nombrepac))
                     El campo nombre solo acepta letras.<br /> 
                     <a href=\"consulta.php\">Volver</a>
                     </h2>";
-                return true; // Error uno de los caracteres no hace parte de la expresión regular 
+                // Error uno de los caracteres no hace parte de la expresión regular 
           }
 if (preg_match($permitidos,$ap))
           {
-            echo "HOLA";
-                return false; // Campo permitido 
+            echo "HOLAp";
+                // Campo permitido 
                 
           } 
           else 
@@ -67,13 +67,13 @@ if (preg_match($permitidos,$ap))
                     El campo apellido paterno solo acepta letras.<br /> 
                     <a href=\"consulta.php\">Volver</a>
                     </h2>";
-                return true; // Error uno de los caracteres no hace parte de la expresión regular 
+                 // Error uno de los caracteres no hace parte de la expresión regular 
           } 
 
 if (preg_match($permitidos,$am))
           {
-            echo "HOLA";
-                return false; // Campo permitido 
+            echo "HOLAm";
+                 // Campo permitido 
           } 
           else 
           { 
@@ -82,7 +82,7 @@ if (preg_match($permitidos,$am))
                     El campo apellido materno solo acepta letras.<br /> 
                     <a href=\"consulta.php\">Volver</a>
                     </h2>";
-                return true; // Error uno de los caracteres no hace parte de la expresión regular 
+                // Error uno de los caracteres no hace parte de la expresión regular 
           } 
 if (!is_numeric($edad)) { 
         echo " 
