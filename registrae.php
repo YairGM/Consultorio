@@ -15,24 +15,24 @@ $concepto = strip_tags($conce); // Asi recogemos el nombre desde el formulario
 $n_conc = strlen($concepto);    // Contamos el numero de caracteres 
 
 $cant = $_POST['cantidad'];            // Asi recogemos el email desde el formulario 
-     if (!is_numeric($cant)) { 
-        echo " 
-                    <h2>
-                    El campo cantidad solo acepta numeros.<br /> 
-                    <a href=\"consulta.php\">Volver</a>
-                    </h2>";
-                    return true;
-    }  
-    else {
-        echo "Son numeros";
-    }
+     
 $fecha = date("d-m-Y");        // Asi recogemos la fecha 
      // Asi recogemos la hora 
 
 $total_car = $n_ingre * $n_conc* $cant;    // Si alguno de ellos vale 0, $total_car valdrá 0 
 
 if ($total_car >= 1) {  
-    // Abrimos la conexion a la base de datos 
+    if (!is_numeric($cant)) { 
+        echo " 
+                    <h2>
+                    El campo cantidad solo acepta numeros.<br /> 
+                    <a href=\"registrae.php\">Volver</a>
+                    </h2>";
+                    return true;
+    }  
+    else {
+        echo "Son numeros";
+        // Abrimos la conexion a la base de datos 
     function pg_connection_string_from_database_url() {
     extract(parse_url($_ENV["DATABASE_URL"]));
     return "user=$user password=$pass host=$host dbname=" . substr($path, 1); # <- you may want to add sslmode=require there too
@@ -44,14 +44,8 @@ if ($total_car >= 1) {
 
   if (pg_query($pg_conn,$pgsql)) {
             echo "Data entered successfully. ";
-        }
-        else {
-            echo "Data entry unsuccessful. ";
-        }
-
-  pg_close($pg_conn);
-  
-        echo " 
+            pg_close($pg_conn);
+            echo " 
         <h2>
         <p>Los datos han sido guardados con exito.</p> 
      
@@ -59,6 +53,12 @@ if ($total_car >= 1) {
      
         <p><a href='consultaE.php' title='Clic aquí'>Ver los resgistros guardados</a></p> 
         </h2>";
+        }
+        else {
+            echo "Data entry unsuccessful. ";
+        } 
+    }
+    
 }else{
     echo " 
     <h2>
