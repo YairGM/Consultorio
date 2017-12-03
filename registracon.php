@@ -37,9 +37,6 @@ $dconsulta = $_POST['consulta'];
 $deconsulta = strip_tags($dconsulta); // Asi recogemos el nombre desde el formulario 
 $n_consulta = strlen($deconsulta); 
 
-$total_car = $n_receta * $n_paciente* $n_ap * $n_am * $edad * $peso * $n_aler * $n_consulta;    // Si alguno de ellos vale 0, $total_car valdrá 0 
-
-if ($total_car >= 1) { 
 if (preg_match($permitidos,$nombrepac))
           {
                 return false; // Campo permitido 
@@ -89,7 +86,7 @@ if (!is_numeric($edad)) {
     else {
         echo "Son numeros";
     }
-    
+
  if (!is_numeric($peso)) { 
         echo " 
                     <h2>
@@ -100,6 +97,10 @@ if (!is_numeric($edad)) {
     else {
         echo "Son numeros";
     }
+    
+$total_car = $n_receta * $n_paciente* $n_ap * $n_am * $edad * $peso * $n_aler * $n_consulta;    // Si alguno de ellos vale 0, $total_car valdrá 0 
+
+if ($total_car >= 1) { 
     // Abrimos la conexion a la base de datos 
     function pg_connection_string_from_database_url() {
     extract(parse_url($_ENV["DATABASE_URL"]));
@@ -130,7 +131,7 @@ if (!is_numeric($edad)) {
 }else{
     echo " 
     <h2>
-    Se deben llenar todos los campos.<br /> 
+    Se localizo un error verifica los campos llenados.<br /> 
     <a href=\"consulta.php\">Volver</a>
     </h2>"; 
     
