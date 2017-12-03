@@ -36,6 +36,7 @@ if (!pg_num_rows($result)) {
 	    echo "<td>" . htmlspecialchars($row[1]) . "</td>";
 	    echo "<td>" . htmlspecialchars($row[2]) . "</td>";
 	    echo "<td>" . htmlspecialchars($row[3]) . "</td>";
+	    echo "<td>" . htmlspecialchars($row[4]) . "</td>";
 	    echo "</tr>";
 	}
 }

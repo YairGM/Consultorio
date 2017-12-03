@@ -49,6 +49,7 @@ if (preg_match($permitidos,$nombrepac))
                     El campo nombre solo acepta letras.<br /> 
                     <a href=\"consulta.php\">Volver</a>
                     </h2>";
+                     return true;
                 // Error uno de los caracteres no hace parte de la expresión regular 
           }
 if (preg_match($permitidos,$ap))
@@ -64,6 +65,7 @@ if (preg_match($permitidos,$ap))
                     El campo apellido paterno solo acepta letras.<br /> 
                     <a href=\"consulta.php\">Volver</a>
                     </h2>";
+                     return true;
                  // Error uno de los caracteres no hace parte de la expresión regular 
           } 
 
@@ -79,6 +81,7 @@ if (preg_match($permitidos,$am))
                     El campo apellido materno solo acepta letras.<br /> 
                     <a href=\"consulta.php\">Volver</a>
                     </h2>";
+                     return true;
                 // Error uno de los caracteres no hace parte de la expresión regular 
           } 
 if (!is_numeric($edad)) { 
@@ -87,6 +90,7 @@ if (!is_numeric($edad)) {
                     El campo edad solo acepta numeros.<br /> 
                     <a href=\"consulta.php\">Volver</a>
                     </h2>";
+                     return true;
     }  
     else {
         echo "Son numeros";
