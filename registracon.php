@@ -5,7 +5,7 @@ include 'footer.php';
 ?>
 <?php 
 echo "Bienvenido " . $_SESSION['usuario'];
-$permitidos = '/^[A-Z üÜáéíóúÁÉÍÓÚñÑ]{1,50}$/i';
+$permitidos = '/^[A-Z a-z üÜáéíóúÁÉÍÓÚñÑ]{1,50}$/i';
 
 // Recibimos por POST los datos procedentes del formulario 
 $noreceta = $_POST['norec'];   
