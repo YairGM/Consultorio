@@ -14,7 +14,9 @@ $servi = $_POST['servicio'];
 $servicio = strip_tags($servi); // Asi recogemos el nombre desde el formulario 
 $n_servi = strlen($servicio);    // Contamos el numero de caracteres 
 
-$canti = $_POST['cantidad'];            // Asi recogemos el email desde el formulario 
+$canti = $_POST['cantidad'];
+$cantida = strip_tags($canti); // Asi recogemos el nombre desde el formulario 
+$n_canti = strlen($cantida);            // Asi recogemos el email desde el formulario 
      
 $fecha = date("d-m-Y");        // Asi recogemos la fecha 
      // Asi recogemos la hora 
@@ -22,7 +24,7 @@ $foli = $_POST['folio'];
 $folio = strip_tags($foli); // Asi recogemos el nombre desde el formulario 
 $n_folio = strlen($folio); 
 
-$total_car = $n_servi * $canti* $n_ingre;    // Si alguno de ellos vale 0, $total_car valdrá 0 
+$total_car = $n_servi * $n_canti* $n_ingre;    // Si alguno de ellos vale 0, $total_car valdrá 0 
 
 if ($total_car >= 1) {  
     if (!is_numeric($canti)) { 

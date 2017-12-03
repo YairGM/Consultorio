@@ -15,11 +15,13 @@ $concepto = strip_tags($conce); // Asi recogemos el nombre desde el formulario
 $n_conc = strlen($concepto);    // Contamos el numero de caracteres 
 
 $cant = $_POST['cantidad'];            // Asi recogemos el email desde el formulario 
+$cantida = strip_tags($canti); // Asi recogemos el nombre desde el formulario 
+$n_canti = strlen($cantida);
      
 $fecha = date("d-m-Y");        // Asi recogemos la fecha 
      // Asi recogemos la hora 
 
-$total_car = $n_ingre * $n_conc* $cant;    // Si alguno de ellos vale 0, $total_car valdrá 0 
+$total_car = $n_ingre * $n_conc* $n_cant;    // Si alguno de ellos vale 0, $total_car valdrá 0 
 
 if ($total_car >= 1) {  
     if (!is_numeric($cant)) { 
