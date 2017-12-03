@@ -5,6 +5,8 @@ include 'footer.php';
 ?>
 <?php 
 echo "Bienvenido " . $_SESSION['usuario'];
+$aErrores = array();
+$aMensajes = array();
 // Recibimos por POST los datos procedentes del formulario 
 $noreceta = $_POST['norec'];   
 $receta = strip_tags($noreceta); // Asi recogemos el nombre desde el formulario 
@@ -13,6 +15,20 @@ $n_receta = strlen($receta);
 $nombrepac = $_POST['nombrep'];   
 $nombrepaciente = strip_tags($nombrepac); // Asi recogemos el nombre desde el formulario 
 $n_paciente = strlen($nombrepaciente);    // Contamos el numero de caracteres 
+
+$patron_texto = "/^[a-zA-ZáéíóúÁÉÍÓÚäëïöüÄËÏÖÜàèìòùÀÈÌÒÙ\s]+$/";
+if( preg_match($patron_texto, $nombrepac){
+                    $aMensajes[] = "Nombre: [".$_POST['txtNombre']."]";
+                }
+                else{
+                    $aErrores[] = "El nombre sólo puede contener letras y espacios";
+                    echo " 
+                    <h2>
+                    El nombre sólo puede contener letras y espacios.<br /> 
+                    <a href=\"consulta.php\">Volver</a>
+                    </h2>"; 
+            }
+
 
 $ap = $_POST['ap'];   
 $apellidop = strip_tags($ap); // Asi recogemos el nombre desde el formulario 
@@ -24,7 +40,11 @@ $n_am = strlen($apellidom);
 
 $edad = $_POST['edad'];            // Asi recogemos el email desde el formulario 
      if (!is_numeric($edad)) { 
-        echo "No son numeros"; 
+        echo " 
+                    <h2>
+                    El campo edad solo acepta numeros.<br /> 
+                    <a href=\"consulta.php\">Volver</a>
+                    </h2>";
     }  
     else {
         echo "Son numeros";
@@ -32,7 +52,11 @@ $edad = $_POST['edad'];            // Asi recogemos el email desde el formulario
 
 $peso = $_POST['peso'];            // Asi recogemos el email desde el formulario 
      if (!is_numeric($peso)) { 
-        echo "No son numeros"; 
+        echo " 
+                    <h2>
+                    El campo peso solo acepta numeros.<br /> 
+                    <a href=\"consulta.php\">Volver</a>
+                    </h2>";
     }  
     else {
         echo "Son numeros";

@@ -26,6 +26,9 @@ echo "Bienvenido " . $_SESSION['usuario'];
 	<br />
 	<button type="submit" style="width:400px;">Guardar consulta</button></p>     
 	</form> 
+	<form method="POST" action="consultaP.php">
+		<button type="submit" style="width:400px;background-color:#4db8ff;">Ver registros</button>
+	</form>
 	<form method="POST" action="contenido.php">
 		<button type="submit" style="width:400px;background-color:#4db8ff;">Volver al menú</button>
 	</form>
