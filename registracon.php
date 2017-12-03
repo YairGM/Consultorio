@@ -6,7 +6,7 @@ include 'footer.php';
 <?php 
 echo "Bienvenido " . $_SESSION['usuario'];
 $permitidos = '/^[A-Z a-z üÜáéíóúÁÉÍÓÚñÑ]{1,50}$/i';
-
+echo "hola";
 // Recibimos por POST los datos procedentes del formulario 
 $noreceta = $_POST['norec'];   
 $receta = strip_tags($noreceta); // Asi recogemos el nombre desde el formulario 
