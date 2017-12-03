@@ -18,9 +18,10 @@ $canti = $_POST['cantidad'];            // Asi recogemos el email desde el formu
      if (!is_numeric($canti)) { 
         echo " 
                     <h2>
-                    El campo peso solo acepta numeros.<br /> 
+                    El campo cantidad solo acepta numeros.<br /> 
                     <a href=\"consulta.php\">Volver</a>
                     </h2>";
+                    return true;
     }  
     else {
         echo "Son numeros";
