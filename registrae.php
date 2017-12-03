@@ -21,7 +21,7 @@ $n_canti = strlen($cantida);
 $fecha = date("d-m-Y");        // Asi recogemos la fecha 
      // Asi recogemos la hora 
 
-$total_car = $n_ingre * $n_conc* $n_cant;    // Si alguno de ellos vale 0, $total_car valdrá 0 
+$total_car = $n_ingre * $n_conc* $n_canti;    // Si alguno de ellos vale 0, $total_car valdrá 0 
 
 if ($total_car >= 1) {  
     if (!is_numeric($cant)) { 
