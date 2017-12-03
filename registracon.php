@@ -5,8 +5,7 @@ include 'footer.php';
 ?>
 <?php 
 echo "Bienvenido " . $_SESSION['usuario'];
-$aErrores = array();
-$aMensajes = array();
+
 // Recibimos por POST los datos procedentes del formulario 
 $noreceta = $_POST['norec'];   
 $receta = strip_tags($noreceta); // Asi recogemos el nombre desde el formulario 
@@ -21,7 +20,7 @@ if( preg_match($patron_texto, $nombrepac){
                     
                 }
                 else{
-                    $aErrores[] = "El nombre sólo puede contener letras y espacios";
+                   
                     echo " 
                     <h2>
                     El nombre sólo puede contener letras y espacios.<br /> 
