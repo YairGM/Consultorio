@@ -28,7 +28,7 @@ if ($total_car >= 1) {
         echo " 
                     <h2>
                     El campo cantidad solo acepta numeros.<br /> 
-                    <a href=\"registrae.php\">Volver</a>
+                    <a href=\"egresos.php\">Volver</a>
                     </h2>";
                     return true;
     }  
@@ -65,7 +65,7 @@ if ($total_car >= 1) {
     echo " 
     <h2>
     Los campos <b>Clave</b>,<b>Concepto</b> y <b>cantidad</b> no pueden estar vacios.<br /> 
-    <a href=\"ingresos.php\">Volver</a>
+    <a href=\"egresos.php\">Volver</a>
     </h2>"; 
     
     exit();

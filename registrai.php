@@ -31,7 +31,7 @@ if ($total_car >= 1) {
         echo " 
                     <h2>
                     El campo cantidad solo acepta numeros.<br /> 
-                    <a href=\"registrai.php\">Volver</a>
+                    <a href=\"ingresos.php\">Volver</a>
                     </h2>";
                     return true;
     }  
