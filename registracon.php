@@ -1,4 +1,5 @@
 <?php
+session_start();
 include 'head.php';
 include 'header.php';
 include 'footer.php';
@@ -41,6 +42,7 @@ $total_car = $n_receta * $n_paciente* $n_ap * $n_am * $edad * $peso * $n_aler * 
 if ($total_car >= 1) {  
 if (preg_match($permitidos,$nombrepac))
           {
+            echo "HOLA";
                 return false; // Campo permitido 
           } 
           else 
@@ -54,7 +56,9 @@ if (preg_match($permitidos,$nombrepac))
           }
 if (preg_match($permitidos,$ap))
           {
+            echo "HOLA";
                 return false; // Campo permitido 
+                
           } 
           else 
           { 
@@ -68,6 +72,7 @@ if (preg_match($permitidos,$ap))
 
 if (preg_match($permitidos,$am))
           {
+            echo "HOLA";
                 return false; // Campo permitido 
           } 
           else 
