@@ -16,7 +16,11 @@ $n_conc = strlen($concepto);    // Contamos el numero de caracteres
 
 $cant = $_POST['cantidad'];            // Asi recogemos el email desde el formulario 
      if (!is_numeric($cant)) { 
-        echo "No son numeros"; 
+        echo " 
+                    <h2>
+                    El campo peso solo acepta numeros.<br /> 
+                    <a href=\"consulta.php\">Volver</a>
+                    </h2>";
     }  
     else {
         echo "Son numeros";
