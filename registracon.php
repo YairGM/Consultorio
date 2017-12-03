@@ -18,7 +18,7 @@ $n_paciente = strlen($nombrepaciente);    // Contamos el numero de caracteres
 
  if (preg_match($permitidos,$nombrepac))
           {
-                return false; // Campo permitido 
+                // Campo permitido 
           } 
           else 
           { 
