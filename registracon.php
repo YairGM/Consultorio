@@ -71,14 +71,8 @@ if ($total_car >= 1) {
 
   if (pg_query($pg_conn,$sql)) {
             echo "Data entered successfully. ";
-        }
-        else {
-            echo "Data entry unsuccessful. ";
-        }
-
-  pg_close($pg_conn);
-  
-        echo " 
+            pg_close($pg_conn);
+            echo " 
         <h2>
         <p>Los datos han sido guardados con exito.</p> 
      
@@ -86,6 +80,12 @@ if ($total_car >= 1) {
      
         <p><a href='consultaP.php' title='Clic aquí'>Ver los resgistros guardados</a></p> 
         </h2>";
+        }
+        else {
+            echo "Data entry unsuccessful. ";
+        }
+ 
+        
 }else{
     echo " 
     <h2>
