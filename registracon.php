@@ -5,6 +5,7 @@ include 'footer.php';
 ?>
 <?php 
 echo "Bienvenido " . $_SESSION['usuario'];
+$permitidos = '/^[A-Z üÜáéíóúÁÉÍÓÚñÑ]{1,50}$/i';
 
 // Recibimos por POST los datos procedentes del formulario 
 $noreceta = $_POST['norec'];   
@@ -15,6 +16,19 @@ $nombrepac = $_POST['nombrep'];
 $nombrepaciente = strip_tags($nombrepac); // Asi recogemos el nombre desde el formulario 
 $n_paciente = strlen($nombrepaciente);    // Contamos el numero de caracteres 
 
+ if (preg_match($permitidos,$nombrepac))
+          {
+                return false; // Campo permitido 
+          } 
+          else 
+          { 
+                echo " 
+                    <h2>
+                    El nombre solo acepta letras.<br /> 
+                    <a href=\"consulta.php\">Volver</a>
+                    </h2>";
+                return true; // Error uno de los caracteres no hace parte de la expresión regular 
+          } 
 
 $ap = $_POST['ap'];   
 $apellidop = strip_tags($ap); // Asi recogemos el nombre desde el formulario 
@@ -84,7 +98,7 @@ if ($total_car >= 1) {
         else {
             echo "Data entry unsuccessful. ";
         }
- 
+  
         
 }else{
     echo " 
