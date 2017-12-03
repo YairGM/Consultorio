@@ -18,7 +18,7 @@ $n_paciente = strlen($nombrepaciente);    // Contamos el numero de caracteres
 
 $patron_texto = "/^[a-zA-ZáéíóúÁÉÍÓÚäëïöüÄËÏÖÜàèìòùÀÈÌÒÙ\s]+$/";
 if( preg_match($patron_texto, $nombrepac){
-                    $aMensajes[] = "Nombre: [".$_POST['txtNombre']."]";
+                    
                 }
                 else{
                     $aErrores[] = "El nombre sólo puede contener letras y espacios";
