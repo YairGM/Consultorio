@@ -34,9 +34,37 @@ $ap = $_POST['ap'];
 $apellidop = strip_tags($ap); // Asi recogemos el nombre desde el formulario 
 $n_ap = strlen($apellidop); 
 
+if (preg_match($permitidos,$ap))
+          {
+                return false; // Campo permitido 
+          } 
+          else 
+          { 
+                echo " 
+                    <h2>
+                    El campo apellido paterno solo acepta letras.<br /> 
+                    <a href=\"consulta.php\">Volver</a>
+                    </h2>";
+                return true; // Error uno de los caracteres no hace parte de la expresión regular 
+          } 
+
 $am = $_POST['am'];   
 $apellidom = strip_tags($am); // Asi recogemos el nombre desde el formulario 
 $n_am = strlen($apellidom); 
+
+if (preg_match($permitidos,$am))
+          {
+                return false; // Campo permitido 
+          } 
+          else 
+          { 
+                echo " 
+                    <h2>
+                    El campo apellido materno solo acepta letras.<br /> 
+                    <a href=\"consulta.php\">Volver</a>
+                    </h2>";
+                return true; // Error uno de los caracteres no hace parte de la expresión regular 
+          } 
 
 $edad = $_POST['edad'];            // Asi recogemos el email desde el formulario 
      if (!is_numeric($edad)) { 
