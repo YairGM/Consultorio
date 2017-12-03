@@ -25,7 +25,7 @@ function pg_connection_string_from_database_url() {
 }
 $pg_conn = pg_connect(pg_connection_string_from_database_url());
 
-$result = pg_query($pg_conn, "SELECT receta,paciente,ap,am,edad FROM paciente ");     // Esta linea hace la consulta 
+$result = pg_query($pg_conn, "SELECT receta,paciente,ap,am FROM paciente ");     // Esta linea hace la consulta 
 
 if (!pg_num_rows($result)) {
   print("No hay datos\n");
@@ -36,7 +36,6 @@ if (!pg_num_rows($result)) {
 	    echo "<td>" . htmlspecialchars($row[1]) . "</td>";
 	    echo "<td>" . htmlspecialchars($row[2]) . "</td>";
 	    echo "<td>" . htmlspecialchars($row[3]) . "</td>";
-	    echo "<td>" . htmlspecialchars($row[4]) . "</td>";
 	    echo "</tr>";
 	}
 }
