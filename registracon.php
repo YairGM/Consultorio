@@ -100,9 +100,7 @@ $n_consulta = strlen($deconsulta);
 
 $total_car = $n_receta * $n_paciente* $n_ap * $n_am * $edad * $peso * $n_aler * $n_consulta;    // Si alguno de ellos vale 0, $total_car valdrá 0 
 
-if ($total_car >= 1) { 
-
-
+if ($total_car >= 1) {  
     // Abrimos la conexion a la base de datos 
     function pg_connection_string_from_database_url() {
     extract(parse_url($_ENV["DATABASE_URL"]));
@@ -133,7 +131,7 @@ if ($total_car >= 1) {
 }else{
     echo " 
     <h2>
-    Verificar todos los campos llenados.<br /> 
+    Se deben llenar todos los campos.<br /> 
     <a href=\"consulta.php\">Volver</a>
     </h2>"; 
     
