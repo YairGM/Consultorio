@@ -16,7 +16,31 @@ $nombrepac = $_POST['nombrep'];
 $nombrepaciente = strip_tags($nombrepac); // Asi recogemos el nombre desde el formulario 
 $n_paciente = strlen($nombrepaciente);    // Contamos el numero de caracteres 
 
- if (preg_match($permitidos,$nombrepac))
+$ap = $_POST['ap'];   
+$apellidop = strip_tags($ap); // Asi recogemos el nombre desde el formulario 
+$n_ap = strlen($apellidop); 
+
+$am = $_POST['am'];   
+$apellidom = strip_tags($am); // Asi recogemos el nombre desde el formulario 
+$n_am = strlen($apellidom); 
+
+$edad = $_POST['edad'];            // Asi recogemos el email desde el formulario 
+     
+
+$peso = $_POST['peso'];            // Asi recogemos el email desde el formulario 
+
+$aler = $_POST['alergias'];   
+$alergiasa = strip_tags($aler); // Asi recogemos el nombre desde el formulario 
+$n_aler = strlen($alergiasa); 
+    
+$dconsulta = $_POST['consulta'];   
+$deconsulta = strip_tags($dconsulta); // Asi recogemos el nombre desde el formulario 
+$n_consulta = strlen($deconsulta); 
+
+$total_car = $n_receta * $n_paciente* $n_ap * $n_am * $edad * $peso * $n_aler * $n_consulta;    // Si alguno de ellos vale 0, $total_car valdrá 0 
+
+if ($total_car >= 1) { 
+if (preg_match($permitidos,$nombrepac))
           {
                 return false; // Campo permitido 
           } 
@@ -29,11 +53,6 @@ $n_paciente = strlen($nombrepaciente);    // Contamos el numero de caracteres
                     </h2>";
                 return true; // Error uno de los caracteres no hace parte de la expresión regular 
           } 
-
-$ap = $_POST['ap'];   
-$apellidop = strip_tags($ap); // Asi recogemos el nombre desde el formulario 
-$n_ap = strlen($apellidop); 
-
 if (preg_match($permitidos,$ap))
           {
                 return false; // Campo permitido 
@@ -47,11 +66,6 @@ if (preg_match($permitidos,$ap))
                     </h2>";
                 return true; // Error uno de los caracteres no hace parte de la expresión regular 
           } 
-
-$am = $_POST['am'];   
-$apellidom = strip_tags($am); // Asi recogemos el nombre desde el formulario 
-$n_am = strlen($apellidom); 
-
 if (preg_match($permitidos,$am))
           {
                 return false; // Campo permitido 
@@ -64,10 +78,8 @@ if (preg_match($permitidos,$am))
                     <a href=\"consulta.php\">Volver</a>
                     </h2>";
                 return true; // Error uno de los caracteres no hace parte de la expresión regular 
-          } 
-
-$edad = $_POST['edad'];            // Asi recogemos el email desde el formulario 
-     if (!is_numeric($edad)) { 
+          }
+if (!is_numeric($edad)) { 
         echo " 
                     <h2>
                     El campo edad solo acepta numeros.<br /> 
@@ -77,9 +89,8 @@ $edad = $_POST['edad'];            // Asi recogemos el email desde el formulario
     else {
         echo "Son numeros";
     }
-
-$peso = $_POST['peso'];            // Asi recogemos el email desde el formulario 
-     if (!is_numeric($peso)) { 
+    
+ if (!is_numeric($peso)) { 
         echo " 
                     <h2>
                     El campo peso solo acepta numeros.<br /> 
@@ -89,18 +100,6 @@ $peso = $_POST['peso'];            // Asi recogemos el email desde el formulario
     else {
         echo "Son numeros";
     }
-
-$aler = $_POST['alergias'];   
-$alergiasa = strip_tags($aler); // Asi recogemos el nombre desde el formulario 
-$n_aler = strlen($alergiasa); 
-    
-$dconsulta = $_POST['consulta'];   
-$deconsulta = strip_tags($dconsulta); // Asi recogemos el nombre desde el formulario 
-$n_consulta = strlen($deconsulta); 
-
-$total_car = $n_receta * $n_paciente* $n_ap * $n_am * $edad * $peso * $n_aler * $n_consulta;    // Si alguno de ellos vale 0, $total_car valdrá 0 
-
-if ($total_car >= 1) {  
     // Abrimos la conexion a la base de datos 
     function pg_connection_string_from_database_url() {
     extract(parse_url($_ENV["DATABASE_URL"]));
