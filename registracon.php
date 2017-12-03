@@ -5,7 +5,7 @@ include 'footer.php';
 ?>
 <?php 
 echo "Bienvenido " . $_SESSION['usuario'];
-$permitidos = '/^[A-Z a-z üÜáéíóúÁÉÍÓÚñÑ]{1,50}$/i';
+$permitidos = '/^[A-Z üÜáéíóúÁÉÍÓÚñÑ]{1,50}$/i';
 
 // Recibimos por POST los datos procedentes del formulario 
 $noreceta = $_POST['norec'];   
@@ -18,14 +18,13 @@ $n_paciente = strlen($nombrepaciente);    // Contamos el numero de caracteres
 
  if (preg_match($permitidos,$nombrepac))
           {
-                // Campo permitido 
+                return false; // Campo permitido 
           } 
           else 
           { 
                 echo " 
                     <h2>
-                    El campo nombre solo acepta letras.<br /> 
-                    <a href=\"consulta.php\">Volver</a>
+                    El nombre solo acepta letras.<br /> 
                     </h2>";
                 return true; // Error uno de los caracteres no hace parte de la expresión regular 
           } 
