@@ -6,7 +6,7 @@ include 'footer.php';?>
 <html>
 
     <body>
-    <div class="container">
+    <div class="container-fluid">
         
         <center>
 

@@ -1,7 +1,7 @@
     <div class="page-header">
-        <h2>
+        <h1>
             Consultorio médico
-        </h2>
+        </h1>
     </div>
     <div class="Menu">
         <ul>
