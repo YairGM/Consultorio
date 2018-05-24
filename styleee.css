@@ -19,6 +19,11 @@ h2{
 	font-family: 'Didact Gothic', sans-serif;
 	height: 120px;
 }
+h3{
+	font-size: 30px;
+	text-align: center;
+	font-family: 'Didact Gothic', sans-serif;
+}
 ul {
     list-style-type: none;
     margin: 0;

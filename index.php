@@ -11,7 +11,7 @@ include 'footer.php';?>
         <center>
 
 	       	<h2>Bienvenido al sistema</h2>
-  			<p>Inicia sesion para tener el control de ingresos y egresos del consultorio.</p>
+  			<h3>Inicia sesion para tener el control de ingresos y egresos del consultorio.</h3>
 
 			<form action="login.php">
     		<button type="submit" style="width:200px;">Iniciar sesion</button>
