@@ -2,6 +2,9 @@
         <h1>
             Consultorio médico
         </h1>
+        <h1>
+            "La esperanza"
+        </h1>
     </div>
     <div class="Menu">
         <ul>
