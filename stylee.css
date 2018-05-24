@@ -17,6 +17,7 @@ h1{
 h2{
     font-size: 40px;
 	text-align: center;
+	font-family: 'Didact Gothic', sans-serif;
 }
 ul {
     list-style-type: none;
@@ -75,7 +76,7 @@ button:hover {
    bottom: 0;
    width: 100%;
    background-color: #333333;
-   color: red;
+   color: #f55e5e;
    text-align: center;
    padding: 20px 0 30px;
 }
