@@ -32,6 +32,9 @@ include 'footer.php';
 		<form method="POST" action="egresos.php">
 			<button type="submit" style="width:400px;">Registro Egresos</button>
 		</form>
+		<form method="POST" action="usuarios.php">
+			<button type="submit" style="width:400px;">Registro usuarios</button>
+		</form>
 		<form method="POST" action="consultaI.php">
 			<button type="submit" style="width:400px;background-color:DodgerBlue;">Consulta Ingresos</button>
 		</form>
