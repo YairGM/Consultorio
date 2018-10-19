@@ -1,6 +1,6 @@
     <div class="page-header">
         <h1>
-            Prodemex
+            Prodemx
         </h1>
     </div>
     <div class="Menu">
