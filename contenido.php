@@ -23,30 +23,15 @@ include 'footer.php';
 	echo "Bienvenido " . $_SESSION['usuario'];
 	?>
 	</h2>
-		form method="POST" action="servicio.php">
-			button type="submit" style="width:400px;">Registro Servicios /button>
-		/form>
 		<form method="POST" action="ingresos.php">
 			<button type="submit" style="width:400px;">Registro Ingresos</button>
 		</form>
-		form method="POST" action="egresos.php">
-			button type="submit" style="width:400px;">Registro Egresos /button>
-		/form>
 		<form method="POST" action="usuarios.php">
 			<button type="submit" style="width:400px;">Registro usuarios</button>
 		</form>
 		<form method="POST" action="consultaI.php">
 			<button type="submit" style="width:400px;background-color:DodgerBlue;">Consulta Ingresos</button>
 		</form>
-		form method="POST" action="consultaE.php">
-			button type="submit" style="width:400px;background-color:DodgerBlue;">Consulta Egresos</button>
-		/form>
-		form method="POST" action="consultaP.php">
-			button type="submit" style="width:400px;background-color:DodgerBlue;">Consultas medicas</button>
-		/form>
-		form method="POST" action="cerrar.php">
-			button type="submit" style="width:400px;background-color:Tomato;">Cerrar sesión</button>
-		/form>
 	</center>
     </div>
 </body>
