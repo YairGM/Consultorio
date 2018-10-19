@@ -1,12 +1,12 @@
     <div class="page-header">
         <h1>
-            Consultorio médico
+            Prodemex
         </h1>
     </div>
     <div class="Menu">
         <ul>
-            <li><a href="#home"></a></li>
-            <li><a href="#alta"></a></li>
-            <li><a href="#consulta"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
         </ul>
     </div>

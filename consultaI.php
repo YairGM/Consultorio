@@ -13,7 +13,7 @@ echo "Bienvenido " . $_SESSION['usuario'];
   <table border='1' cellpadding='0' cellspacing='0' width='600' bgcolor='#F6F6F6' bordercolor='#FFFFFF'>  
     <tr>  
       <td width='150' style='font-weight: bold'>ID</td>  
-      <td width='150' style='font-weight: bold'>FOLIO RECETA</td>  
+      <td width='150' style='font-weight: bold'>FOLIO</td>  
       <td width='150' style='font-weight: bold'>CONCEPTO</td>  
       <td width='150' style='font-weight: bold'>CANTIDAD</td>  
       <td width='150' style='font-weight: bold'>FECHA</td>  
